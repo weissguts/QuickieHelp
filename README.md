@@ -1,3 +1,4 @@
+
 # QuickieHelp
 
 - *Group project for University of Denver coding bootcamp.
@@ -12,4 +13,5 @@
 # QuickieHelp will have featured charities, users, as well as other incentives for people to be active within both the local community, and the quickieHelp community. 
 
 # Charities will have an option to pay a fee for priority placement on website.
+
 
