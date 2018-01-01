@@ -32,7 +32,7 @@ gulp.task('sass', function() {
 
 // Minify compiled CSS
 gulp.task('minify-css', ['sass'], function() {
-  return gulp.src('css/freelancer.css')
+  return gulp.src('css/charity.css')
     .pipe(cleanCSS({
       compatibility: 'ie8'
     }))
@@ -47,7 +47,7 @@ gulp.task('minify-css', ['sass'], function() {
 
 // Minify custom JS
 gulp.task('minify-js', function() {
-  return gulp.src('js/freelancer.js')
+  return gulp.src('js/charity.js')
     .pipe(uglify())
     .pipe(header(banner, {
       pkg: pkg
