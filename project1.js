@@ -39,6 +39,8 @@ var database = firebase.database();
       age = $("#age").val().trim();
       gender = $("#gender").val().trim();
 
+      createAcount();
+
       
       database.ref().set({
       	firstName: firstName,
@@ -50,6 +52,7 @@ var database = firebase.database();
 
         
       });
+      console.log(database);
     });
 
  database.ref().on("value", function(snapshot) {
@@ -57,3 +60,26 @@ var database = firebase.database();
     }, function(errorObject) {
       console.log("Errors handled: " + errorObject.code);
     });
+
+
+function createAcount() {
+  
+       let userEmail = $("#email").val().trim();
+       let userPassword = $("#password").val().trim();
+
+
+
+      firebase.auth().createUserWithEmailAndPassword(userEmail, userPassword).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // ...
+});
+      
+
+}
+
+
+
+// parralels
+// virtual machine on start up
