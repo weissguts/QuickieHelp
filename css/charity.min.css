@@ -5,12 +5,56 @@
  */
 
 body {
-  font-family: Lato
+  font-family: 'Nunito', sans-serif;
+}
+footer {
+  background-color: #1A535C;
+  color: white;
+}
+#copyright {
+  text-align: center
+
+}
+#socialmedia {
+  padding: 2% 0% 0% 41%;
+}
+#footerList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    color: white;
+}
+.footerItems {
+  float: left;
+  display: block;
+  color: white !important; 
+  font-weight: bold;
+  font-size: 16px;
+  padding: 16px;
+  text-decoration: none;
+}
+.footerItems:hover {
+  color: white;
+  }
+#signupbtn {
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  background-color: #FF6B6B;
+  border-color: #FF6B6B;
+  position: absolute;
+  bottom: 50%;
+  right: 47%;
+  z-index: 100;
+  display:inline-block;
+}
+#signupbtn:hover {
+    border-color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  font-family: Montserrat
+  font-family: 'Nunito', sans-serif;
 }
 
 hr.star-dark, hr.star-light {
@@ -29,7 +73,7 @@ hr.star-dark:after, hr.star-light:after {
   display: inline-block;
   padding: 0 .25em;
   content: '\f004';
-  font-family: FontAwesome;
+  font-family: 'Nunito', sans-serif;
   font-size: 2em
 }
 
@@ -39,7 +83,7 @@ hr.star-light {
 
 hr.star-light:after {
   color: #fff;
-  background-color: #18BC9C
+  background-color: #fff
 }
 
 hr.star-dark {
@@ -52,11 +96,17 @@ hr.star-dark:after {
 }
 
 #mainNav .navbar-brand, #mainNav .navbar-nav li.nav-item a.nav-link {
-  color: #fff
+  color: #4ECDC4
 }
-
+#womenpic {
+  max-width: 100%;
+    height: auto;
+    width: auto\9;
+    position: relative;
+    display:inline-block;
+}
 section {
-  padding: 6rem 0
+  padding: 1rem 0
 }
 
 section h2 {
@@ -98,19 +148,16 @@ section h2 {
 }
 
 #mainNav {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   font-weight: 700;
-  font-family: Montserrat
+  font-family: 'Nunito', sans-serif;
 }
 
 #mainNav .navbar-nav {
-  margin-top: 1rem;
   letter-spacing: .0625rem
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-  color: #18BC9C
+  color: #1A535C
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
@@ -118,12 +165,11 @@ section h2 {
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link.active {
-  color: #18BC9C
+  color: #4ECDC4
 }
 
 #mainNav .navbar-toggler {
   font-size: 80%;
-  padding: .8rem
 }
 
 @media (min-width:992px) {
@@ -138,27 +184,38 @@ section h2 {
     font-size: 2em;
     -webkit-transition: font-size .3s;
     -moz-transition: font-size .3s;
-    transition: font-size .3s
+    transition: font-size .3s;
   }
   #mainNav .navbar-nav {
     margin-top: 0
   }
   #mainNav .navbar-nav>li.nav-item>a.nav-link.active, #mainNav .navbar-nav>li.nav-item>a.nav-link.active:active, #mainNav .navbar-nav>li.nav-item>a.nav-link.active:focus, #mainNav .navbar-nav>li.nav-item>a.nav-link.active:hover {
     color: #fff;
-    background: #18BC9C
+    background: #1A535C
   }
   #mainNav.navbar-shrink {
     padding-top: .5rem;
     padding-bottom: .5rem
   }
   #mainNav.navbar-shrink .navbar-brand {
-    font-size: 1.5em
+    font-size: 4em
   }
+}
+#slogan {
+  position: absolute;
+  color: #1A535C;
+}
+
+#volunteer {
+  color: #1A535C;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
 }
 
 header.masthead {
-  padding-top: calc(6rem + 72px);
-  padding-bottom: 6rem
+  /*padding-top: calc(6rem + 72px);
+  padding-bottom: 2rem*/
 }
 
 header.masthead h1 {
@@ -168,13 +225,13 @@ header.masthead h1 {
 
 header.masthead h2 {
   font-size: 1.3rem;
-  font-family: Lato
+  font-family: 'Nunito', sans-serif;
 }
 
 @media (min-width:992px) {
   header.masthead {
-    padding-top: calc(6rem + 106px);
-    padding-bottom: 6rem
+    padding-top: calc(1rem + 106px);
+    padding-bottom: 1rem;
   }
   header.masthead h1 {
     font-size: 4.75em;
@@ -303,7 +360,7 @@ header.masthead h2 {
 }
 
 .floating-label-form-group-with-focus label {
-  color: #18BC9C
+  color: #4ECDC4
 }
 
 form .row:first-child .floating-label-form-group {
@@ -322,11 +379,11 @@ form .row:first-child .floating-label-form-group {
 }
 
 a {
-  color: #18BC9C
+  color: #4ECDC4
 }
 
 a:active, a:focus, a:hover {
-  color: #128f76
+  color: #1A535C
 }
 
 .btn {
@@ -334,15 +391,15 @@ a:active, a:focus, a:hover {
 }
 
 .bg-primary {
-  background-color: #18BC9C!important
+  background-color: #fff!important
 }
 
 .bg-secondary {
-  background-color: #2C3E50!important
+  background-color: #fff!important
 }
 
 .text-primary {
-  color: #18BC9C!important
+  color: #4ECDC4!important
 }
 
 .text-secondary {
@@ -350,8 +407,8 @@ a:active, a:focus, a:hover {
 }
 
 .btn-primary {
-  background-color: #18BC9C;
-  border-color: #18BC9C
+  background-color: #4ECDC4;
+  border-color: #4ECDC4
 }
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
