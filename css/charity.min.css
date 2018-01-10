@@ -41,11 +41,12 @@ footer {
   font-family: 'Nunito', sans-serif;
   font-weight: bold;
   background-color: #FF6B6B;
+  color: white;
   border-color: #FF6B6B;
   position: absolute;
   bottom: 50%;
   right: 47%;
-  z-index: 100;
+  z-index: 50;
   display:inline-block;
 }
 #signupbtn:hover {
@@ -67,33 +68,6 @@ hr.star-dark, hr.star-light {
   margin-bottom: 2.5rem
 }
 
-hr.star-dark:after, hr.star-light:after {
-  position: relative;
-  top: -.8em;
-  display: inline-block;
-  padding: 0 .25em;
-  content: '\f004';
-  font-family: 'Nunito', sans-serif;
-  font-size: 2em
-}
-
-hr.star-light {
-  border-color: #fff
-}
-
-hr.star-light:after {
-  color: #fff;
-  background-color: #fff
-}
-
-hr.star-dark {
-  border-color: #2C3E50
-}
-
-hr.star-dark:after {
-  color: #2C3E50;
-  background-color: #fff
-}
 
 #mainNav .navbar-brand, #mainNav .navbar-nav li.nav-item a.nav-link {
   color: #4ECDC4
@@ -104,6 +78,25 @@ hr.star-dark:after {
     width: auto\9;
     position: relative;
     display:inline-block;
+    z-index: 0;
+}
+#charityDropdown {
+  font-weight: bold
+}
+
+.btn-group {
+  bottom: -12%;
+}
+
+#testimonialTitle {
+  color: white;
+  font-weight: bold:
+}
+#createEvent {
+  color: #1A535C;
+}
+#testimonialSection {
+  background-color: #4ECDC4;
 }
 section {
   padding: 1rem 0
@@ -378,9 +371,6 @@ form .row:first-child .floating-label-form-group {
   background-color: #1a252f
 }
 
-a {
-  color: #4ECDC4
-}
 
 a:active, a:focus, a:hover {
   color: #1A535C

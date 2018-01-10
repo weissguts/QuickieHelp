@@ -39,10 +39,10 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="login.html">log in</a>
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#login">log in</a>
         </li>
         <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="signup.html">sign up</a>
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#signup">sign up</a>
         </li>
          <li class="nav-item mx-0 mx-lg-1">
           <div class="btn-group">
@@ -51,11 +51,11 @@
    			 <span class="caret"></span>
  			 </a>
   			<ul class="dropdown-menu">
-  				<li class="dropdown-item"><a href="charity_eventpage.html">
-  					create event
+  				<li class="dropdown-item" a href="#charityLogin">
+  					log in
   				</li>
-  				<li class="dropdown-item"><a href="aboutus.html">
-  				learn more
+  				<li class="dropdown-item" a href="#charitySignup">
+  				sign up
   			</li>
   			</ul>
 			</div>
@@ -65,193 +65,12 @@
   </div>
 </nav>
 
-<!-- Header -->
-<header class="masthead bg-primary text-white text-center">
-  <div>
-    <img id="womenpic" src="img/women.jpg" alt="signupnow">
-     <button type="button" id="signupbtn" class="btn btn-primary btn-lg"><a href="signup.html">sign up</button></a>
-  </div>
-</header>
+<!-- Sign-up section -->
+<section class="bg-primary text-black mb-0" id="charitySignup">
+  <div class="container">
+    <h2 class="text-center text-black">Charity Sign up</h2>
 
-<!-- Charity Grid Section -->
-<section class="charities" id="charities">
-  <div class="container-fluid">
-    <h2 class="text-left text-secondary mb-0" id="volunteer">Volunteer opportunities:</h2>
-    <br>
-    <div class="row">
-      <div class="col-md-6 col-lg-4">
-        <a class="charity-item d-block mx-auto" href="#charity-modal-1">
-          <div class="charity-item-caption d-flex position-absolute h-100 w-100">
-            <div class="charity-item-caption-content my-auto w-100 text-center text-white">
-              <i class="fa fa-search-plus fa-3x"></i>
-            </div>
-          </div>
-          <img class="img-fluid" src="img/charity_top/puppyrun.png" alt="">
-        </a>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <a class="charity-item d-block mx-auto" href="#charity-modal-2">
-          <div class="charity-item-caption d-flex position-absolute h-100 w-100">
-            <div class="charity-item-caption-content my-auto w-100 text-center text-white">
-              <i class="fa fa-search-plus fa-3x"></i>
-            </div>
-          </div>
-          <img class="img-fluid" src="img/charity_top/breakfast.png" alt="">
-        </a>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <a class="charity-item d-block mx-auto" href="#charity-modal-3">
-          <div class="charity-item-caption d-flex position-absolute h-100 w-100">
-            <div class="charity-item-caption-content my-auto w-100 text-center text-white">
-              <i class="fa fa-search-plus fa-3x"></i>
-            </div>
-          </div>
-          <img class="img-fluid" src="img/charity_top/park.png" alt="">
-        </a>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <a class="charity-item d-block mx-auto" href="#charity-modal-4">
-          <div class="charity-item-caption d-flex position-absolute h-100 w-100">
-            <div class="charity-item-caption-content my-auto w-100 text-center text-white">
-              <i class="fa fa-search-plus fa-3x"></i>
-            </div>
-          </div>
-          <img class="img-fluid" src="img/charity_top/mentor.png" alt="">
-        </a>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <a class="charity-item d-block mx-auto" href="#charity-modal-5">
-          <div class="charity-item-caption d-flex position-absolute h-100 w-100">
-            <div class="charity-item-caption-content my-auto w-100 text-center text-white">
-              <i class="fa fa-search-plus fa-3x"></i>
-            </div>
-          </div>
-          <img class="img-fluid" src="img/charity_top/home.png" alt="">
-        </a>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <a class="charity-item d-block mx-auto" href="#charity-modal-6">
-          <div class="charity-item-caption d-flex position-absolute h-100 w-100">
-            <div class="charity-item-caption-content my-auto w-100 text-center text-white">
-              <i class="fa fa-search-plus fa-3x"></i>
-            </div>
-          </div>
-          <img class="img-fluid" src="img/charity_top/teach.png" alt="">
-        </a>
-      </div>
-    </div>
-  </div>
 </section>
-
-<!-- Section Divider -->
-
-<!-- Testimonial Section -->
- <!--Section: Testimonials v.1-->
- <section id="testimonialSection" class="pb-3 text-center">
- 	<div class="container">
-        
-    <!--Section heading-->
-    <h1 id="testimonialTitle" class="font-bold h1 py-5">Testimonials</h1>
-    <!--Section description-->
-    
-    <div class="row">
-    
-        <!--Grid column-->
-        <div class="col-lg-4 col-md-12 mb-r">
-    
-            <!--Card-->
-            <div class="card testimonial-card">
-    
-                <!--Background color-->
-                <div class="card-up info-color"></div>
-    
-                <!--Avatar-->
-                <div class="avatar">
-                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg" class="rounded-circle img-responsive">
-                </div>
-    
-                <div class="card-body">
-                    <!--Name-->
-                    <h4 class="mt-1">
-                        <strong>Really Attractive Guy</strong>
-                    </h4>
-                    <hr>
-                    <!--Quotation-->
-                    <p class="dark-grey-text">Dude, I met so many cool ladies on this site. Plus, I get a chance to give back to my community. I might just look like a self-absorbed tool, but in reality...I care.</p>
-                </div>
-    
-            </div>
-            <!--Card-->
-    
-        </div>
-        <!--Grid column-->
-    
-        <!--Grid column-->
-        <div class="col-lg-4 col-md-12 mb-r">
-    
-            <!--Card-->
-            <div class="card testimonial-card">
-    
-                <!--Background color-->
-                <div class="card-up blue-gradient">
-                </div>
-    
-                <!--Avatar-->
-                <div class="avatar">
-                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" class="rounded-circle img-responsive">
-                </div>
-    
-                <div class="card-body">
-                    <!--Name-->
-                    <h4 class="mt-1">
-                        <strong>Happy Couple</strong>
-                    </h4>
-                    <hr>
-                    <!--Quotation-->
-                    <p class="dark-grey-text">We met 6 months ago doing a charity event for Denver Rescue Mission. We still do Quickie events...but now we do it as a couple!</p>
-                </div>
-    
-            </div>
-            <!--Card-->
-    
-        </div>
-        <!--Grid column-->
-    
-        <!--Grid column-->
-        <div class="col-lg-4 col-md-12 mb-r">
-    
-            <!--Card-->
-            <div class="card testimonial-card">
-    
-                <!--Background color-->
-                <div class="card-up indigo"></div>
-    
-                <!--Avatar-->
-                <div class="avatar">
-                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg" class="rounded-circle img-responsive">
-                </div>
-    
-                <div class="card-body">
-                    <!--Name-->
-                    <h4 class="mt-1">
-                        <strong>Cute Nerd</strong>
-                    </h4>
-                    <hr>
-                    <!--Quotation-->
-                    <p class="dark-grey-text">I hate men, and women. And people. But, I like volunteering and this site lets me plausibly lie to my therapist that I'm socializing more.</p>
-                </div>
-    
-            </div>
-            <!--Card-->
-    
-        </div>
-        <!--Grid column-->
-    
-    </div>
-    
-</section>
-</div>
-<!--Section: Testimonials v.1-->
 
 <!--Footer-->
 <footer class="page-footer indigo center-on-small-only pt-0">
