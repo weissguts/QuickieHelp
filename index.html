@@ -9,29 +9,7 @@
   <meta name="author" content="">
 
   <title>QuickieHelp</title>
-  <script src="https://apis.google.com/js/api.js"></script>
-  <script>
-  function start() {
-    // 2. Initialize the JavaScript client library.
-    gapi.client.init({
-      'apiKey': 'AIzaSyBZJcuSuQ60EoER2xhWtbKj_8_-zwZkgWA',
-      // clientId and scope are optional if auth is not required.
-      'clientId': '601954114317-c10280jjsdfouibgm5uerhdo59laoqi6.apps.googleusercontent.com',
-      'scope': 'profile',
-    }).then(function() {
-      // 3. Initialize and make the API request.
-      return gapi.client.request({
-        'path': 'https://people.googleapis.com/v1/people/me?requestMask.includeField=person.names',
-      })
-    }).then(function(response) {
-      console.log(response.result);
-    }, function(reason) {
-      console.log('Error: ' + reason.result.error.message);
-    });
-  };
-  // 1. Load the JavaScript client library.
-  gapi.load('client', start);
-  </script>
+
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -353,11 +331,13 @@
           <a class="btn btn-primary btn-lg rounded-pill charity-modal-dismiss" href="#">
             <i class="fa fa-close"></i>
             Close Event</a>
-            <c class="btn btn-primary btn-lg rounded-pill" id="addToCalendar">
-          Add to Calendar</c>
+            <button class="btn btn-primary btn-lg rounded-pill" id="authorize-button">Sign In</button>
+            <button class="btn btn-primary btn-lg rounded-pill" id="signout-button" >Sign Out</button>
+            <button class="btn btn-primary btn-lg rounded-pill" id="add-event" >Add Event</button>
+            <pre id="content"></pre>
           <script>
           let Event = {
-            'summary': 'Puppy Run',
+            'summary': 'Dog Dash',
 'location': 'Dumb Friends League',
 'description': 'Come meet fellow dog lovers at the 3rd annual Puppy Run. Registered at the event. $5 entrance fee. Water and snacks included throughout the run.',
 'start': {
@@ -391,6 +371,25 @@
           <a class="btn btn-primary btn-lg rounded-pill charity-modal-dismiss" href="#">
             <i class="fa fa-close"></i>
             Close Event</a>
+            <button class="btn btn-primary btn-lg rounded-pill" id="authorize-button">Sign In</button>
+            <button class="btn btn-primary btn-lg rounded-pill" id="signout-button" >Sign Out</button>
+            <button class="btn btn-primary btn-lg rounded-pill" id="add-event2" >Add Event</button>
+            <pre id="content"></pre>
+            <script>
+            let Event2 = {
+              'summary': 'Breakfast for Homeless Youth',
+  'location': 'Urban Peak',
+  'description': "Urban Peak is looking for community members interested in serving a hot breakfast to our community's homeless youth. Time commitments of 2-3 hours, and all supplies provided.",
+  'start': {
+  'dateTime': '2018-02-02T07:00:00-08:00',
+  'timeZone': 'America/Denver',
+  },
+  'end': {
+  'dateTime': '2018-02-02T10:00:00-08:00',
+  'timeZone': 'America/Denver',
+  },
+  };
+            </script>
         </div>
       </div>
     </div>
@@ -412,6 +411,25 @@
           <a class="btn btn-primary btn-lg rounded-pill charity-modal-dismiss" href="#">
             <i class="fa fa-close"></i>
             Close Event</a>
+            <button class="btn btn-primary btn-lg rounded-pill" id="authorize-button">Sign In</button>
+            <button class="btn btn-primary btn-lg rounded-pill" id="signout-button" >Sign Out</button>
+            <button class="btn btn-primary btn-lg rounded-pill" id="add-event3" >Add Event</button>
+            <pre id="content"></pre>
+            <script>
+            let Event3 = {
+              'summary': 'Estes Park Clean Up',
+  'location': 'Estes Park',
+  'description': "One of our state's greatest parks is in need of some clean-up. Hike the beautiful trail, meet new people, and restore our environment.",
+  'start': {
+  'dateTime': '2018-02-12T11:00:00-08:00',
+  'timeZone': 'America/Denver',
+  },
+  'end': {
+  'dateTime': '2018-02-12T14:00:00-08:00',
+  'timeZone': 'America/Denver',
+  },
+  };
+            </script>
         </div>
       </div>
     </div>
@@ -433,6 +451,25 @@
           <a class="btn btn-primary btn-lg rounded-pill charity-modal-dismiss" href="#">
             <i class="fa fa-close"></i>
             Close Event</a>
+            <button class="btn btn-primary btn-lg rounded-pill" id="authorize-button">Sign In</button>
+            <button class="btn btn-primary btn-lg rounded-pill" id="signout-button" >Sign Out</button>
+            <button class="btn btn-primary btn-lg rounded-pill" id="add-event4" >Add Event</button>
+            <pre id="content"></pre>
+            <script>
+            let Event4 = {
+              'summary': 'Youth Mentors',
+  'location': 'Denver Rescue Mission',
+  'description': "The Denver Rescue Mission is looking for mentors between the ages of 25-40 to mentor area youth. Mentoring includes weekly check-ins, monthly meet-ups, and lifelong connections.",
+  'start': {
+  'dateTime': '2018-02-18T11:00:00-08:00',
+  'timeZone': 'America/Denver',
+  },
+  'end': {
+  'dateTime': '2018-02-18T14:00:00-08:00',
+  'timeZone': 'America/Denver',
+  },
+  };
+            </script>
         </div>
       </div>
     </div>
@@ -454,6 +491,25 @@
           <a class="btn btn-primary btn-lg rounded-pill charity-modal-dismiss" href="#">
             <i class="fa fa-close"></i>
             Close Event</a>
+            <button class="btn btn-primary btn-lg rounded-pill" id="authorize-button">Sign In</button>
+            <button class="btn btn-primary btn-lg rounded-pill" id="signout-button" >Sign Out</button>
+            <button class="btn btn-primary btn-lg rounded-pill" id="add-event5" >Add Event</button>
+            <pre id="content"></pre>
+            <script>
+            let Event5 = {
+              'summary': 'Construction Function',
+  'location': 'Habitat for Humanity',
+  'description': "Build a house. Create a home. Habitat for Humanity is looking for community members to work weekend building shifts. No experience needed. Bring your own gloves and hammer.",
+  'start': {
+  'dateTime': '2018-01-26T08:00:00-08:00',
+  'timeZone': 'America/Denver',
+  },
+  'end': {
+  'dateTime': '2018-01-26T15:00:00-08:00',
+  'timeZone': 'America/Denver',
+  },
+  };
+            </script>
         </div>
       </div>
     </div>
@@ -475,6 +531,25 @@
           <a class="btn btn-primary btn-lg rounded-pill charity-modal-dismiss" href="#">
             <i class="fa fa-close"></i>
             Close Event</a>
+            <button class="btn btn-primary btn-lg rounded-pill" id="authorize-button">Sign In</button>
+            <button class="btn btn-primary btn-lg rounded-pill" id="signout-button">Sign Out</button>
+            <button class="btn btn-primary btn-lg rounded-pill" id="add-event6">Add Event</button>
+            <pre id="content"></pre>
+            <script>
+            let Event6 = {
+              'summary': 'Teach Art',
+  'location': 'Coalition for the Homeless',
+  'description': "Art is the foundation of education. Help area youth discover art and their creative side. Multiple times available--information session on the 1st of Feb.",
+  'start': {
+  'dateTime': '2018-02-01T18:00:00-08:00',
+  'timeZone': 'America/Denver',
+  },
+  'end': {
+  'dateTime': '2018-02-01T20:00:00-08:00',
+  'timeZone': 'America/Denver',
+  },
+  };
+            </script>
         </div>
       </div>
     </div>
@@ -498,6 +573,7 @@
 <script src="js/charity.min.js"></script>
 <script src="js/quickie.js"></script>
 
+<script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
 </body>
 
 </html>
