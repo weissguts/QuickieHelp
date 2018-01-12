@@ -48,11 +48,11 @@ function initClient() {
  */
 function updateSigninStatus(isSignedIn) {
   if (isSignedIn) {
-    $("#authorizeButton").addClass("btn btn-primary btn-lg rounded-pill");
+    $(".authorizeButton").addClass("btn btn-primary btn-lg rounded-pill");
     $("signoutButton").addClass("btn btn-primary btn-lg rounded-pill");
     $("addEventButton").addClass("btn btn-primary btn-lg rounded-pill");
   } else {
-    $("#authorizeButton").addClass("btn btn-primary btn-lg rounded-pill");
+    $(".authorizeButton").addClass("btn btn-primary btn-lg rounded-pill");
     $("signoutButton").addClass("btn btn-primary btn-lg rounded-pill");
   }
 }
@@ -78,7 +78,7 @@ function handleSignoutClick(event) {
  * @param {string} message Text to be placed in pre element.
  */
 function appendPre(message) {
-  var pre = document.getElementById('content');
+  var pre = document.getElementsByClassName('content');
   var textContent = document.createTextNode(message + '\n');
   pre.appendChild(textContent);
 }
@@ -106,7 +106,7 @@ function eventFun() {
   });
 };
 
-$("body").on("click", "#authorize-button", function() {
+$("body").on("click", ".authorize-button", function() {
   gapi.auth2.getAuthInstance().signIn();
   initClient();
 });
