@@ -1,62 +1,146 @@
-$(document).ready(function () {
+//new
+let currentEvent;
+var CLIENT_ID = "601954114317-c10280jjsdfouibgm5uerhdo59laoqi6.apps.googleusercontent.com";
+var API_KEY = "AIzaSyBZJcuSuQ60EoER2xhWtbKj_8_-zwZkgWA";
 
+// Array of API discovery doc URLs for APIs used by the quickstart
+var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
 
-// var slideIndex = 1;
-// showSlides(slideIndex);
-//
-// // Next/previous controls
-// function plusSlides(n) {
-//     showSlides(slideIndex += n);
-// }
-//
-// // Thumbnail image controls
-// function currentSlide(n) {
-//     showSlides(slideIndex = n);
-// }
+// Authorization scopes required by the API; multiple scopes can be
+// included, separated by spaces.
+var SCOPES = "https://www.googleapis.com/auth/calendar";
 
-function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
+var authorizeButton = document.getElementById('authorize-button');
+var signoutButton = document.getElementById('signout-button');
+var addEventButton = document.getElementById('add-event');
+
+/**
+ *  On load, called to load the auth2 library and API client library.
+ */
+function handleClientLoad() {
+  gapi.load('client:auth2', initClient);
 }
 
+/**
+ *  Initializes the API client library and sets up sign-in state
+ *  listeners.
+ */
+function initClient() {
+  gapi.client.init({
+    apiKey: API_KEY,
+    clientId: CLIENT_ID,
+    discoveryDocs: DISCOVERY_DOCS,
+    scope: SCOPES
+  }).then(function() {
+    // Listen for sign-in state changes.
+    gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+
+    // Handle the initial sign-in state.
+    updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+    authorizeButton.onclick = handleAuthClick;
+    signoutButton.onclick = handleSignoutClick;
+  });
+}
+
+/**
+ *  Called when the signed in status changes, to update the UI
+ *  appropriately. After a sign-in, the API is called.
+ */
+function updateSigninStatus(isSignedIn) {
+  if (isSignedIn) {
+    $("#authorizeButton").addClass("btn btn-primary btn-lg rounded-pill");
+    $("signoutButton").addClass("btn btn-primary btn-lg rounded-pill");
+    $("addEventButton").addClass("btn btn-primary btn-lg rounded-pill");
+  } else {
+    $("#authorizeButton").addClass("btn btn-primary btn-lg rounded-pill");
+    $("signoutButton").addClass("btn btn-primary btn-lg rounded-pill");
+  }
+}
+
+/**
+ *  Sign in the user upon button click.
+ */
+function handleAuthClick(event) {
+  gapi.auth2.getAuthInstance().signIn();
+}
+
+/**
+ *  Sign out the user upon button click.
+ */
+function handleSignoutClick(event) {
+  gapi.auth2.getAuthInstance().signOut();
+}
+
+/**
+ * Append a pre element to the body containing the given message
+ * as its text node. Used to display the results of the API call.
+ *
+ * @param {string} message Text to be placed in pre element.
+ */
+function appendPre(message) {
+  var pre = document.getElementById('content');
+  var textContent = document.createTextNode(message + '\n');
+  pre.appendChild(textContent);
+}
+
+/**
+ * Print the summary and start datetime/date of the next ten events in
+ * the authorized user's calendar. If no events are found an
+ * appropriate message is printed.
+ */
 
 
 
-//Google Maps
-    function initMap() {
-    var latlng = new google.maps.LatLng(39.679504, -104.902479);
-        //Map options
-        var options = {
-            zoom:12,
-            center: latlng
-        };
+// var addEvent = document.getElementById('add-event');
 
-        //New Map
-        var map = new
-        google.maps.Map(document.getElementById('map'), options);
+//addEvent.onclick = eventFun;
+function eventFun() {
 
-        //Add Marker
-        var optionsMarker = {
-            position: latlng,
-            map:map
-        };
-        var marker = new google.maps.Marker(optionsMarker);
+  var request = gapi.client.calendar.events.insert({
+    'calendarId': 'primary',
+    'resource': currentEvent
+  });
 
-    }
+  request.execute(function(event) {
+    appendPre('Event created: ' + event.summary);
+  });
+};
 
-    initMap();
-
+$("body").on("click", "#authorize-button", function() {
+  gapi.auth2.getAuthInstance().signIn();
+  initClient();
 });
 
+$("body").on("click", "#signout-button", function() {
+  gapi.auth2.getAuthInstance().signOut();
+});
 
+$("#add-event").on("click", function() {
+  currentEvent = Event;
+  eventFun();
+});
+
+$("#add-event2").on("click", function() {
+  currentEvent = Event2;
+  eventFun();
+});
+
+$("#add-event3").on("click", function() {
+  currentEvent = Event3;
+  eventFun();
+});
+
+$("#add-event4").on("click", function() {
+  currentEvent = Event4;
+  eventFun();
+});
+
+$("#add-event5").on("click", function() {
+  currentEvent = Event5;
+  eventFun();
+});
+
+$("#add-event6").on("click", function() {
+  currentEvent = Event6;
+  eventFun();
+})
