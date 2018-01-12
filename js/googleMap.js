@@ -25,7 +25,7 @@ $(document).ready(function () {
     };
 
     function initMapTwo() {
-        var latlng = new google.maps.LatLng(39.679504, -104.902479);
+        var latlng = new google.maps.LatLng(39.7504613,-104.98660660000002);
         //Map options
         var options = {
             zoom:15,
@@ -47,7 +47,7 @@ $(document).ready(function () {
     };
 
     function initMapThree() {
-        var latlng = new google.maps.LatLng(39.679504, -104.902479);
+        var latlng = new google.maps.LatLng(40.3772059,-105.5216651);
         //Map options
         var options = {
             zoom:15,
@@ -69,7 +69,7 @@ $(document).ready(function () {
     };
 
     function initMapFour() {
-        var latlng = new google.maps.LatLng(39.679504, -104.902479);
+        var latlng = new google.maps.LatLng(39.75486739999999,-104.98803129999999);
         //Map options
         var options = {
             zoom:15,
@@ -91,7 +91,7 @@ $(document).ready(function () {
     };
 
     function initMapFive() {
-        var latlng = new google.maps.LatLng(39.679504, -104.902479);
+        var latlng = new google.maps.LatLng(39.7630243,-105.02413910000001);
         //Map options
         var options = {
             zoom:15,
@@ -113,7 +113,7 @@ $(document).ready(function () {
     };
 
     function initMapSix() {
-        var latlng = new google.maps.LatLng(39.679504, -104.902479);
+        var latlng = new google.maps.LatLng(39.7515866,-104.98777630000001);
         //Map options
         var options = {
             zoom:15,
@@ -165,11 +165,6 @@ $(document).ready(function () {
     $('#mapTeach').click(function () {
         initMapSix();
     });
-
-
-
-
-
 
 
 });
