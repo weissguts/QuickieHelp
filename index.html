@@ -15,7 +15,8 @@
 
   <!-- Custom fonts for this template -->
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
   <!-- Plugin CSS -->
   <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
@@ -29,36 +30,23 @@
 <body id="page-top">
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
-  <div class="container-fluid">
-    <a class="navbar-brand js-scroll-trigger"><img src="img/logo.png" alt="logo"></a>
-    <button class="navbar-toggler navbar-toggler-right bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">Quickie Help</a>
+    <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       Menu
       <i class="fa fa-bars"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="login.html">log in</a>
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#charity">Charities</a>
         </li>
         <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="signup.html">sign up</a>
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Rockstars</a>
         </li>
-         <li class="nav-item mx-0 mx-lg-1">
-          <div class="btn-group">
- 			 <a class="btn dropdown-toggle" data-toggle="dropdown" id="charityDropdown" href="#">
-    		 charities
-   			 <span class="caret"></span>
- 			 </a>
-  			<ul class="dropdown-menu">
-  				<li class="dropdown-item"><a href="charity_eventpage.html">
-  					create event
-  				</li>
-  				<li class="dropdown-item"><a href="aboutus.html">
-  				learn more
-  			</li>
-  			</ul>
-			</div>
+        <li class="nav-item mx-0 mx-lg-1">
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
         </li>
       </ul>
     </div>
@@ -67,19 +55,21 @@
 
 <!-- Header -->
 <header class="masthead bg-primary text-white text-center">
+  <div class="container">
+    <!--<h1 class="text-uppercase mb-0">Quickie Help</h1>-->
+    <img class="img-fluid mb-5 d-block mx-auto" src="img/charity_top/logo.png" alt="">
+    <hr class="star-light">
+    <h2 class="font-weight-light mb-0">What We Are</h2>
 
-  <div>
-    <img id="womenpic" src="img/women.jpg" alt="signupnow">
-     <button type="button" id="signupbtn" class="btn btn-primary btn-lg"><a href="signup.html">sign up</button></a>
-
+    <br>
   </div>
 </header>
 
 <!-- Charity Grid Section -->
 <section class="charities" id="charities">
-  <div class="container-fluid">
-    <h2 class="text-left text-secondary mb-0" id="volunteer">Volunteer opportunities:</h2>
-    <br>
+  <div class="container">
+    <h2 class="text-center text-uppercase text-secondary mb-0">Charities</h2>
+    <hr class="star-dark mb-5">
     <div class="row">
       <div class="col-md-6 col-lg-4">
         <a class="charity-item d-block mx-auto" href="#charity-modal-1">
@@ -88,7 +78,7 @@
               <i class="fa fa-search-plus fa-3x"></i>
             </div>
           </div>
-          <img class="img-fluid" src="img/charity_top/puppyrun.png" alt="">
+          <img class="img-fluid" src="img/charity_top/charity_template.png" alt="">
         </a>
       </div>
       <div class="col-md-6 col-lg-4">
@@ -98,7 +88,7 @@
               <i class="fa fa-search-plus fa-3x"></i>
             </div>
           </div>
-          <img class="img-fluid" src="img/charity_top/breakfast.png" alt="">
+          <img class="img-fluid" src="img/charity_top/cake.png" alt="">
         </a>
       </div>
       <div class="col-md-6 col-lg-4">
@@ -108,7 +98,7 @@
               <i class="fa fa-search-plus fa-3x"></i>
             </div>
           </div>
-          <img class="img-fluid" src="img/charity_top/park.png" alt="">
+          <img class="img-fluid" src="img/charity_top/circus.png" alt="">
         </a>
       </div>
       <div class="col-md-6 col-lg-4">
@@ -118,7 +108,7 @@
               <i class="fa fa-search-plus fa-3x"></i>
             </div>
           </div>
-          <img class="img-fluid" src="img/charity_top/mentor.png" alt="">
+          <img class="img-fluid" src="img/charity_top/game.png" alt="">
         </a>
       </div>
       <div class="col-md-6 col-lg-4">
@@ -128,7 +118,7 @@
               <i class="fa fa-search-plus fa-3x"></i>
             </div>
           </div>
-          <img class="img-fluid" src="img/charity_top/home.png" alt="">
+          <img class="img-fluid" src="img/charity_top/safe.png" alt="">
         </a>
       </div>
       <div class="col-md-6 col-lg-4">
@@ -138,168 +128,13 @@
               <i class="fa fa-search-plus fa-3x"></i>
             </div>
           </div>
-          <img class="img-fluid" src="img/charity_top/teach.png" alt="">
+          <img class="img-fluid" src="img/charity_top/submarine.png" alt="">
         </a>
       </div>
     </div>
   </div>
 </section>
-<!-- Section Divider -->
 
-<!-- Testimonial Section -->
- <!--Section: Testimonials v.1-->
- <section id="testimonialSection" class="pb-3 text-center">
- 	<div class="container">
-        
-    <!--Section heading-->
-    <h1 id="testimonialTitle" class="font-bold h1 py-5">Testimonials</h1>
-    <!--Section description-->
-    
-    <div class="row">
-    
-        <!--Grid column-->
-        <div class="col-lg-4 col-md-12 mb-r">
-    
-            <!--Card-->
-            <div class="card testimonial-card">
-    
-                <!--Background color-->
-                <div class="card-up info-color"></div>
-    
-                <!--Avatar-->
-                <div class="avatar">
-                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg" class="rounded-circle img-responsive">
-                </div>
-    
-                <div class="card-body">
-                    <!--Name-->
-                    <h4 class="mt-1">
-                        <strong>Really Attractive Guy</strong>
-                    </h4>
-                    <hr>
-                    <!--Quotation-->
-                    <p class="dark-grey-text">Dude, I met so many cool ladies on this site. Plus, I get a chance to give back to my community. I might just look like a self-absorbed tool, but in reality...I care.</p>
-                </div>
-    
-            </div>
-            <!--Card-->
-    
-        </div>
-        <!--Grid column-->
-    
-        <!--Grid column-->
-        <div class="col-lg-4 col-md-12 mb-r">
-    
-            <!--Card-->
-            <div class="card testimonial-card">
-    
-                <!--Background color-->
-                <div class="card-up blue-gradient">
-                </div>
-    
-                <!--Avatar-->
-                <div class="avatar">
-                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" class="rounded-circle img-responsive">
-                </div>
-    
-                <div class="card-body">
-                    <!--Name-->
-                    <h4 class="mt-1">
-                        <strong>Happy Couple</strong>
-                    </h4>
-                    <hr>
-                    <!--Quotation-->
-                    <p class="dark-grey-text">We met 6 months ago doing a charity event for Denver Rescue Mission. We still do Quickie events...but now we do it as a couple!</p>
-                </div>
-    
-            </div>
-            <!--Card-->
-    
-        </div>
-        <!--Grid column-->
-    
-        <!--Grid column-->
-        <div class="col-lg-4 col-md-12 mb-r">
-    
-            <!--Card-->
-            <div class="card testimonial-card">
-    
-                <!--Background color-->
-                <div class="card-up indigo"></div>
-    
-                <!--Avatar-->
-                <div class="avatar">
-                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg" class="rounded-circle img-responsive">
-                </div>
-    
-                <div class="card-body">
-                    <!--Name-->
-                    <h4 class="mt-1">
-                        <strong>Cute Nerd</strong>
-                    </h4>
-                    <hr>
-                    <!--Quotation-->
-                    <p class="dark-grey-text">I hate men, and women. And people. But, I like volunteering and this site lets me plausibly lie to my therapist that I'm socializing more.</p>
-                </div>
-    
-            </div>
-            <!--Card-->
-    
-        </div>
-        <!--Grid column-->
-    
-    </div>
-    
-</section>
-</div>
-<!--Section: Testimonials v.1-->
-
-<!--Footer-->
-<footer class="page-footer indigo center-on-small-only pt-0">
-
-    <!--Footer Links-->
-    <div class="container-fluid">
-
-        <!--First row-->
-        <div class="row">
-
-            <!--First column-->
-            <div class="col-md-6">
-            	<ul id="footerList">
-				  <li class="footerItems"><a href="#about">About</a></li>
-				  <li class="footerItems"><a href="#contact">Contact</a></li>
-				  <li class="footerItems"><a href="#support">Support</a></li>
-				</ul>
-            </div>
-            <div class="col-md-6">
-
-                <div id="socialmedia" class="footer-socials mb-5 flex-center">
-
-                    <!--Facebook-->
-                    <a class="icons-sm fb-ic"><i class="fa fa-facebook fa-lg white-text mr-md-4"> </i></a>
-                    <!--Twitter-->
-                    <a class="icons-sm tw-ic"><i class="fa fa-twitter fa-lg white-text mr-md-4"> </i></a>
-                    <!--Google +-->
-                    <a class="icons-sm gplus-ic"><i class="fa fa-google-plus fa-lg white-text mr-md-4"> </i></a>
-           
-                    <!--Instagram-->
-                    <a class="icons-sm ins-ic"><i class="fa fa-instagram fa-lg white-text mr-md-4"> </i></a>
-                    <!--Pinterest-->
-                    <a class="icons-sm pin-ic"><i class="fa fa-pinterest fa-lg white-text"> </i></a>
-                </div>
-            </div>
-            <!--/First column-->
-        </div>
-        <!--/First row-->
-    </div>
-    <!--/Footer Links-->
-
-    <!--Copyright-->
-    <div id="copyright" class="footer-copyright">
-        <div class="container-fluid">
-            © 2018 Copyright: QuickieHelp
-        </div>
-      
 <!-- About Section -->
 <section class="bg-primary text-white mb-0" id="about">
   <div class="container">
@@ -398,12 +233,14 @@
         <h4 class="text-uppercase mb-4">About quickieHelp</h4>
       </div>
     </div>
-    <!--/Copyright-->
-
+  </div>
 </footer>
-<!--/Footer-->
 
-
+<div class="copyright py-4 text-center text-white">
+  <div class="container">
+    <small>Copyright &copy; Your Website 2018</small>
+  </div>
+</div>
 
 <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
 <div class="scroll-to-top d-lg-none position-fixed ">
@@ -423,12 +260,13 @@
     <div class="container text-center">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2 class="text-secondary mb-0">Event Details:</h2>
-          <img class="img-fluid mb-5" src="img/charity_top/puppyrun.png" alt="">
-          <p class="mb-5">Come meet fellow dog lovers at the 3rd annual Puppy Run. Registered at the event. $5 entrance fee. Water and snacks included throughout the run.</p>
+          <h2 class="text-secondary text-uppercase mb-0">Charity</h2>
+          <hr class="star-dark mb-5">
+          <img class="img-fluid mb-5" src="img/charity_top/charity_template.png" alt="">
+          <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
           <a class="btn btn-primary btn-lg rounded-pill charity-modal-dismiss" href="#">
             <i class="fa fa-close"></i>
-            Close Event</a>
+            Close Project</a>
         </div>
       </div>
     </div>
@@ -444,13 +282,12 @@
     <div class="container text-center">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2 class="text-secondary  mb-0">Event Details:</h2>
-          <img class="img-fluid mb-5" src="img/charity_top/breakfast.png" alt="">
-          <p class="mb-5">Urban Peak is looking for community members interested in serving a hot breakfast to our community's homeless youth. Time commitments of 2-3 hours, and all supplies provided.</p>
+          <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+          <hr class="star-dark mb-5">
+          <img class="img-fluid mb-5" src="img/charity_top/cake.png" alt="">
+          <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
           <a class="btn btn-primary btn-lg rounded-pill charity-modal-dismiss" href="#">
             <i class="fa fa-close"></i>
-
-            Close Event</a>
             Close Project</a>
           <c class="btn btn-primary btn-lg rounded-pill" id="addToCalendar">
           Add to Calendar</c>
@@ -582,7 +419,6 @@
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
 
-
         </div>
       </div>
     </div>
@@ -599,12 +435,13 @@
     <div class="container text-center">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2 class="text-secondary mb-0">Event Details:</h2>
-          <img class="img-fluid mb-5" src="img/charity_top/park.png" alt="">
-          <p class="mb-5">One of our state's greatest parks is in need of some clean-up. Hike the beautiful trail, meet new people, and restore our environment.</p>
+          <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+          <hr class="star-dark mb-5">
+          <img class="img-fluid mb-5" src="img/charity_top/circus.png" alt="">
+          <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
           <a class="btn btn-primary btn-lg rounded-pill charity-modal-dismiss" href="#">
             <i class="fa fa-close"></i>
-            Close Event</a>
+            Close Project</a>
         </div>
       </div>
     </div>
@@ -620,12 +457,13 @@
     <div class="container text-center">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2 class="text-secondary mb-0">Event Details:</h2>
-          <img class="img-fluid mb-5" src="img/charity_top/mentor.png" alt="">
-          <p class="mb-5">The Denver Rescue Mission is looking for mentors between the ages of 25-40 to mentor area youth. Mentoring includes weekly check-ins, monthly meet-ups, and lifelong connections.</p>
+          <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+          <hr class="star-dark mb-5">
+          <img class="img-fluid mb-5" src="img/charity_top/game.png" alt="">
+          <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
           <a class="btn btn-primary btn-lg rounded-pill charity-modal-dismiss" href="#">
             <i class="fa fa-close"></i>
-            Close Event</a>
+            Close Project</a>
         </div>
       </div>
     </div>
@@ -641,12 +479,13 @@
     <div class="container text-center">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2 class="text-secondary mb-0">Event Details:</h2>
-          <img class="img-fluid mb-5" src="img/charity_top/home.png" alt="">
-          <p class="mb-5">Build a house. Create a home. Habitat for Humanity is looking for community members to work weekend building shifts. No experience needed. Bring your own gloves and hammer.</p>
+          <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+          <hr class="star-dark mb-5">
+          <img class="img-fluid mb-5" src="img/charity_top/safe.png" alt="">
+          <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
           <a class="btn btn-primary btn-lg rounded-pill charity-modal-dismiss" href="#">
             <i class="fa fa-close"></i>
-            Close Event</a>
+            Close Project</a>
         </div>
       </div>
     </div>
@@ -662,12 +501,13 @@
     <div class="container text-center">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2 class="text-secondary mb-0">Event Details:</h2>
-          <img class="img-fluid mb-5" src="img/charity_top/teach.png" alt="">
-          <p class="mb-5">Art is the foundation of education. Help area youth discover art and their creative side. Multiple times available--information session on the 1st of Feb.</p>
+          <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+          <hr class="star-dark mb-5">
+          <img class="img-fluid mb-5" src="img/charity_top/submarine.png" alt="">
+          <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
           <a class="btn btn-primary btn-lg rounded-pill charity-modal-dismiss" href="#">
             <i class="fa fa-close"></i>
-            Close Event</a>
+            Close Project</a>
         </div>
       </div>
     </div>
