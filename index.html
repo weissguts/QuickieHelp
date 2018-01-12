@@ -9,6 +9,29 @@
   <meta name="author" content="">
 
   <title>QuickieHelp</title>
+  <script src="https://apis.google.com/js/api.js"></script>
+  <script>
+  function start() {
+    // 2. Initialize the JavaScript client library.
+    gapi.client.init({
+      'apiKey': 'AIzaSyBZJcuSuQ60EoER2xhWtbKj_8_-zwZkgWA',
+      // clientId and scope are optional if auth is not required.
+      'clientId': '601954114317-c10280jjsdfouibgm5uerhdo59laoqi6.apps.googleusercontent.com',
+      'scope': 'profile',
+    }).then(function() {
+      // 3. Initialize and make the API request.
+      return gapi.client.request({
+        'path': 'https://people.googleapis.com/v1/people/me?requestMask.includeField=person.names',
+      })
+    }).then(function(response) {
+      console.log(response.result);
+    }, function(reason) {
+      console.log('Error: ' + reason.result.error.message);
+    });
+  };
+  // 1. Load the JavaScript client library.
+  gapi.load('client', start);
+  </script>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -149,27 +172,27 @@
  <!--Section: Testimonials v.1-->
  <section id="testimonialSection" class="pb-3 text-center">
  	<div class="container">
-        
+
     <!--Section heading-->
     <h1 id="testimonialTitle" class="font-bold h1 py-5">Testimonials</h1>
     <!--Section description-->
-    
+
     <div class="row">
-    
+
         <!--Grid column-->
         <div class="col-lg-4 col-md-12 mb-r">
-    
+
             <!--Card-->
             <div class="card testimonial-card">
-    
+
                 <!--Background color-->
                 <div class="card-up info-color"></div>
-    
+
                 <!--Avatar-->
                 <div class="avatar">
                     <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg" class="rounded-circle img-responsive">
                 </div>
-    
+
                 <div class="card-body">
                     <!--Name-->
                     <h4 class="mt-1">
@@ -179,28 +202,28 @@
                     <!--Quotation-->
                     <p class="dark-grey-text">Dude, I met so many cool ladies on this site. Plus, I get a chance to give back to my community. I might just look like a self-absorbed tool, but in reality...I care.</p>
                 </div>
-    
+
             </div>
             <!--Card-->
-    
+
         </div>
         <!--Grid column-->
-    
+
         <!--Grid column-->
         <div class="col-lg-4 col-md-12 mb-r">
-    
+
             <!--Card-->
             <div class="card testimonial-card">
-    
+
                 <!--Background color-->
                 <div class="card-up blue-gradient">
                 </div>
-    
+
                 <!--Avatar-->
                 <div class="avatar">
                     <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" class="rounded-circle img-responsive">
                 </div>
-    
+
                 <div class="card-body">
                     <!--Name-->
                     <h4 class="mt-1">
@@ -210,27 +233,27 @@
                     <!--Quotation-->
                     <p class="dark-grey-text">We met 6 months ago doing a charity event for Denver Rescue Mission. We still do Quickie events...but now we do it as a couple!</p>
                 </div>
-    
+
             </div>
             <!--Card-->
-    
+
         </div>
         <!--Grid column-->
-    
+
         <!--Grid column-->
         <div class="col-lg-4 col-md-12 mb-r">
-    
+
             <!--Card-->
             <div class="card testimonial-card">
-    
+
                 <!--Background color-->
                 <div class="card-up indigo"></div>
-    
+
                 <!--Avatar-->
                 <div class="avatar">
                     <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg" class="rounded-circle img-responsive">
                 </div>
-    
+
                 <div class="card-body">
                     <!--Name-->
                     <h4 class="mt-1">
@@ -240,15 +263,15 @@
                     <!--Quotation-->
                     <p class="dark-grey-text">I hate men, and women. And people. But, I like volunteering and this site lets me plausibly lie to my therapist that I'm socializing more.</p>
                 </div>
-    
+
             </div>
             <!--Card-->
-    
+
         </div>
         <!--Grid column-->
-    
+
     </div>
-    
+
 </section>
 </div>
 <!--Section: Testimonials v.1-->
@@ -280,7 +303,7 @@
                     <a class="icons-sm tw-ic"><i class="fa fa-twitter fa-lg white-text mr-md-4"> </i></a>
                     <!--Google +-->
                     <a class="icons-sm gplus-ic"><i class="fa fa-google-plus fa-lg white-text mr-md-4"> </i></a>
-           
+
                     <!--Instagram-->
                     <a class="icons-sm ins-ic"><i class="fa fa-instagram fa-lg white-text mr-md-4"> </i></a>
                     <!--Pinterest-->
@@ -330,6 +353,23 @@
           <a class="btn btn-primary btn-lg rounded-pill charity-modal-dismiss" href="#">
             <i class="fa fa-close"></i>
             Close Event</a>
+            <c class="btn btn-primary btn-lg rounded-pill" id="addToCalendar">
+          Add to Calendar</c>
+          <script>
+          let Event = {
+            'summary': 'Puppy Run',
+'location': 'Dumb Friends League',
+'description': 'Come meet fellow dog lovers at the 3rd annual Puppy Run. Registered at the event. $5 entrance fee. Water and snacks included throughout the run.',
+'start': {
+'dateTime': '2018-01-31T08:00:00-08:00',
+'timeZone': 'America/Denver',
+},
+'end': {
+'dateTime': '2018-01-31T14:00:00-08:00',
+'timeZone': 'America/Denver',
+},
+};
+          </script>
         </div>
       </div>
     </div>
@@ -440,6 +480,7 @@
     </div>
   </div>
 </div>
+
 
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
