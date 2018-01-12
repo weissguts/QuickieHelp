@@ -22,7 +22,7 @@
   <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
 
   <!-- Custom styles for this template -->
-  <link href="css/charity.min.css" rel="stylesheet">
+  <link href="css/charity.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 
 </head>
@@ -31,23 +31,36 @@
 
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
-  <div class="container">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">Quickie Help</a>
-    <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
+  <div class="container-fluid">
+    <a class="navbar-brand js-scroll-trigger"><img src="img/logo.png" alt="logo" class="logo"></a>
+    <button class="navbar-toggler navbar-toggler-right bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       Menu
       <i class="fa fa-bars"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#charity">Charities</a>
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="login.html">log in</a>
         </li>
         <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Rockstars</a>
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="helper_profile.html">sign up</a>
         </li>
         <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
+          <div class="btn-group">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" id="charityDropdown" href="#">
+              charities
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="charity_eventpage.html"></a>
+                create event
+              </li>
+              <li class="dropdown-item"><a href="aboutus.html"></a>
+                learn more
+              </li>
+            </ul>
+          </div>
         </li>
       </ul>
     </div>
@@ -56,21 +69,16 @@
 
 <!-- Header -->
 <header class="masthead bg-primary text-white text-center">
-  <div class="container">
-    <!--<h1 class="text-uppercase mb-0">Quickie Help</h1>-->
-    <img class="img-fluid mb-5 d-block mx-auto" src="img/charity_top/logo.png" alt="">
-    <hr class="star-light">
-    <h2 class="font-weight-light mb-0">What We Are</h2>
-    <!--<div id="map"></div>-->
-
-    <br>
+  <div>
+    <img id="womenpic" src="img/women.jpg" alt="signupnow">
+    <!--<button type="button" id="signupbtn" class="btn btn-primary btn-lg"><a href="signup.html">sign up</button></a>-->
   </div>
 </header>
 
 <!-- Charity Grid Section -->
 <section class="charities" id="charities">
   <div class="container">
-    <h2 class="text-center text-uppercase text-secondary mb-0">Charities</h2>
+    <h4 class="text-center text-uppercase text-secondary mb-0">Volunteer Opportunities</h4>
     <hr class="star-dark mb-5">
     <div class="row">
       <div class="col-md-6 col-lg-4">
@@ -90,7 +98,7 @@
               <i class="fa fa-search-plus fa-3x"></i>
             </div>
           </div>
-          <img class="img-fluid" src="img/charity_top/cake.png" alt="">
+          <img class="img-fluid" src="img/charity_top/breakfast.PNG" alt="">
         </a>
       </div>
       <div class="col-md-6 col-lg-4">
@@ -100,7 +108,7 @@
               <i class="fa fa-search-plus fa-3x"></i>
             </div>
           </div>
-          <img class="img-fluid" src="img/charity_top/circus.png" alt="">
+          <img class="img-fluid" src="img/charity_top/park.PNG" alt="">
         </a>
       </div>
       <div class="col-md-6 col-lg-4">
@@ -110,7 +118,7 @@
               <i class="fa fa-search-plus fa-3x"></i>
             </div>
           </div>
-          <img class="img-fluid" src="img/charity_top/game.png" alt="">
+          <img class="img-fluid" src="img/charity_top/mentor.PNG" alt="">
         </a>
       </div>
       <div class="col-md-6 col-lg-4">
@@ -120,7 +128,7 @@
               <i class="fa fa-search-plus fa-3x"></i>
             </div>
           </div>
-          <img class="img-fluid" src="img/charity_top/safe.png" alt="">
+          <img class="img-fluid" src="img/charity_top/home.PNG" alt="">
         </a>
       </div>
       <div class="col-md-6 col-lg-4">
@@ -130,68 +138,116 @@
               <i class="fa fa-search-plus fa-3x"></i>
             </div>
           </div>
-          <img class="img-fluid" src="img/charity_top/submarine.png" alt="">
+          <img class="img-fluid" src="img/charity_top/teach.PNG" alt="">
         </a>
       </div>
     </div>
   </div>
-</section>
 
-<!-- About Section -->
-<section class="bg-primary text-white mb-0" id="about">
-  <div class="container">
-    <h2 class="text-center text-uppercase text-white">Testimonials</h2>
-    <hr class="star-light mb-5">
-    <!--<div class="row">-->
-      <!--<div class="col-lg-4 ml-auto">-->
-        <!--<p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>-->
-      <!--</div>-->
-      <!--<div class="col-lg-4 mr-auto">-->
-        <!--<p class="lead">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'.</p>-->
-      <!--</div>-->
-    <!--</div>-->
 
-    <!-- Slideshow container -->
-    <div class="slideshow-container">
+  <section id="testimonialSection" class="pb-3 text-center">
+    <div class="container">
 
-      <!-- Full-width images with number and caption text -->
-      <div class="mySlides">
-        <div class="numbertext">1 / 3</div>
-        <img src="img/charity_top/charity_one.png" style="width:100%" class="charityImgHeader">
+      <!--Section heading-->
+      <h1 id="testimonialTitle" class="font-bold h1 py-5">Testimonials</h1>
+      <!--Section description-->
 
+      <div class="row">
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-r">
+
+          <!--Card-->
+          <div class="card testimonial-card">
+
+            <!--Background color-->
+            <div class="card-up info-color"></div>
+
+            <!--Avatar-->
+            <div class="avatar">
+              <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg" class="rounded-circle img-responsive">
+            </div>
+
+            <div class="card-body">
+              <!--Name-->
+              <h4 class="mt-1">
+                <strong>Really Attractive Guy</strong>
+              </h4>
+              <hr>
+              <!--Quotation-->
+              <p class="dark-grey-text">Dude, I met so many cool ladies on this site. Plus, I get a chance to give back to my community. I might just look like a self-absorbed tool, but in reality...I care.</p>
+            </div>
+
+          </div>
+          <!--Card-->
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-r">
+
+          <!--Card-->
+          <div class="card testimonial-card">
+
+            <!--Background color-->
+            <div class="card-up blue-gradient">
+            </div>
+
+            <!--Avatar-->
+            <div class="avatar">
+              <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" class="rounded-circle img-responsive">
+            </div>
+
+            <div class="card-body">
+              <!--Name-->
+              <h4 class="mt-1">
+                <strong>Happy Couple</strong>
+              </h4>
+              <hr>
+              <!--Quotation-->
+              <p class="dark-grey-text">We met 6 months ago doing a charity event for Denver Rescue Mission. We still do Quickie events...but now we do it as a couple!</p>
+            </div>
+
+          </div>
+          <!--Card-->
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-r">
+
+          <!--Card-->
+          <div class="card testimonial-card">
+
+            <!--Background color-->
+            <div class="card-up indigo"></div>
+
+            <!--Avatar-->
+            <div class="avatar">
+              <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg" class="rounded-circle img-responsive">
+            </div>
+
+            <div class="card-body">
+              <!--Name-->
+              <h4 class="mt-1">
+                <strong>Cute Nerd</strong>
+              </h4>
+              <hr>
+              <!--Quotation-->
+              <p class="dark-grey-text">I hate men, and women. And people. But, I like volunteering and this site lets me plausibly lie to my therapist that I'm socializing more.</p>
+            </div>
+
+          </div>
+          <!--Card-->
+
+        </div>
+        <!--Grid column-->
 
       </div>
 
-      <div class="mySlides">
-        <div class="numbertext">2 / 3</div>
-        <img src="img/charity_top/charity_two.png" style="width:100%" class="charityImgHeader">
-
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">3 / 3</div>
-        <img src="img/charity_top/charity_three.png" style="width:100%" class="charityImgHeader">
-
-      </div>
-      <br>
-    </div>
-    <!-- Next and previous buttons -->
-    <div style="text-align:center">
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-    <!-- The dots/circles -->
-
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
-  </div>
-
-
-</section>
-
-
+    </div></section>
 <!-- Footer -->
 <footer class="footer text-center">
   <div class="container">
@@ -295,7 +351,7 @@
         <div class="col-lg-8 mx-auto">
           <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
           <hr class="star-dark mb-5">
-          <img class="img-fluid mb-5" src="img/charity_top/cake.png" alt="">
+          <img class="img-fluid mb-5" src="img/charity_top/breakfast.PNG" alt="">
           <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
           <a class="btn btn-primary btn-lg rounded-pill charity-modal-dismiss" href="#">
             <i class="fa fa-close"></i>
@@ -317,7 +373,7 @@
         <div class="col-lg-8 mx-auto">
           <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
           <hr class="star-dark mb-5">
-          <img class="img-fluid mb-5" src="img/charity_top/circus.png" alt="">
+          <img class="img-fluid mb-5" src="img/charity_top/park.PNG" alt="">
           <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
           <a class="btn btn-primary btn-lg rounded-pill charity-modal-dismiss" href="#">
             <i class="fa fa-close"></i>
@@ -339,7 +395,7 @@
         <div class="col-lg-8 mx-auto">
           <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
           <hr class="star-dark mb-5">
-          <img class="img-fluid mb-5" src="img/charity_top/game.png" alt="">
+          <img class="img-fluid mb-5" src="img/charity_top/mentor.PNG" alt="">
           <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
           <a class="btn btn-primary btn-lg rounded-pill charity-modal-dismiss" href="#">
             <i class="fa fa-close"></i>
@@ -361,7 +417,7 @@
         <div class="col-lg-8 mx-auto">
           <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
           <hr class="star-dark mb-5">
-          <img class="img-fluid mb-5" src="img/charity_top/safe.png" alt="">
+          <img class="img-fluid mb-5" src="img/charity_top/home.PNG" alt="">
           <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
           <a class="btn btn-primary btn-lg rounded-pill charity-modal-dismiss" href="#">
             <i class="fa fa-close"></i>
@@ -383,7 +439,7 @@
         <div class="col-lg-8 mx-auto">
           <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
           <hr class="star-dark mb-5">
-          <img class="img-fluid mb-5" src="img/charity_top/submarine.png" alt="">
+          <img class="img-fluid mb-5" src="img/charity_top/teach.PNG" alt="">
           <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
           <a class="btn btn-primary btn-lg rounded-pill charity-modal-dismiss" href="#">
             <i class="fa fa-close"></i>
