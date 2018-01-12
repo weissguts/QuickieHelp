@@ -52,7 +52,7 @@ function showSlides(n) {
             map:map
         };
         var marker = new google.maps.Marker(optionsMarker);
-  
+
 
     }
 
