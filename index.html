@@ -29,6 +29,7 @@
 
 <body id="page-top">
 
+
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
   <div class="container">
@@ -60,6 +61,7 @@
     <img class="img-fluid mb-5 d-block mx-auto" src="img/charity_top/logo.png" alt="">
     <hr class="star-light">
     <h2 class="font-weight-light mb-0">What We Are</h2>
+    <!--<div id="map"></div>-->
 
     <br>
   </div>
@@ -264,9 +266,18 @@
           <hr class="star-dark mb-5">
           <img class="img-fluid mb-5" src="img/charity_top/charity_template.png" alt="">
           <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+
+          <div id="map">
+
+
+          </div>
+          <a class="btn btn-primary btn-lg rounded-pill charity-modal" href="helper_profile.html" target="_blank">
+            <i class="fa fa-check-square"></i>
+            Sign Up!</a>
           <a class="btn btn-primary btn-lg rounded-pill charity-modal-dismiss" href="#">
             <i class="fa fa-close"></i>
             Close Project</a>
+
         </div>
       </div>
     </div>
@@ -508,11 +519,16 @@
           <a class="btn btn-primary btn-lg rounded-pill charity-modal-dismiss" href="#">
             <i class="fa fa-close"></i>
             Close Project</a>
+
+
         </div>
       </div>
     </div>
   </div>
+
 </div>
+
+
 
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
@@ -527,8 +543,11 @@
 <script src="js/contact_me.js"></script>
 
 <!-- Custom scripts for this template -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZJcuSuQ60EoER2xhWtbKj_8_-zwZkgWA"
+        async defer></script>
 <script src="js/charity.min.js"></script>
 <script src="js/quickie.js"></script>
+
 <script src="https://apis.google.com/js/api.js"></script>
 
 <script>
