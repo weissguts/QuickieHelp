@@ -19,7 +19,8 @@
     <link href="css/charity.css" rel="stylesheet">
 
   </head>
-  <body id="page-top bg-primary">
+
+  <body id="page-top" class="bg-primary">
     <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">Quickie Help</a>
@@ -96,15 +97,10 @@
                   <input type="checkbox" id="foodBank" value="foodBank"> Food Bank
               </label>
               <label class="checkbox-inline">
-<<<<<<< HEAD
                   <input type="checkbox" id="historical" value="historical"> Historical
-=======
-                  <input type="checkbox" id="historical" value="historcial"> Historical
->>>>>>> ffe44d0b1432e94220c0003080593ad33b252233
               </label>
               <br />
               <button type="submit" class="btn btn-default">Submit</button>
-
             </div>
         </div>
         </form>
@@ -155,7 +151,32 @@
         </div>
       </div>
     </footer>
-
+    <script src = "https://apis.google.com/js/api.js"> </script>
+    <script >
+      function start() {
+        // 2. Initialize the JavaScript client library.
+        gapi.client.init({
+          'apiKey': 'AIzaSyBZJcuSuQ60EoER2xhWtbKj_8_-zwZkgWA',
+          // Your API key will be automatically added to the Discovery Document URLs.
+          'discoveryDocs': ['https://people.googleapis.com/$discovery/rest'],
+          // clientId and scope are optional if auth is not required.
+          'clientId': '601954114317-c10280jjsdfouibgm5uerhdo59laoqi6.apps.googleusercontent.com',
+          'scope': 'profile',
+        }).then(function() {
+          // 3. Initialize and make the API request.
+          return gapi.client.people.people.get({
+            'resourceName': 'people/me',
+            'requestMask.includeField': 'person.names'
+          });
+        }).then(function(response) {
+          console.log(response.result);
+        }, function(reason) {
+          console.log('Error: ' + reason.result.error.message);
+        });
+      };
+    // 1. Load the JavaScript client library.
+    gapi.load('client', start);
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="./project1.js"></script>

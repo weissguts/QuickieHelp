@@ -1,14 +1,64 @@
-var slideIndex = 0;
-showSlides();
+$(document).ready(function () {
 
-function showSlides() {
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
     var i;
     var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
     slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 4000); // Change image every 5 seconds
+    dots[slideIndex-1].className += " active";
 }
+
+
+
+
+//Google Maps
+    function initMap() {
+    var latlng = new google.maps.LatLng(39.679504, -104.902479);
+        //Map options
+        var options = {
+            zoom:12,
+            center: latlng
+        };
+
+        //New Map
+        var map = new
+        google.maps.Map(document.getElementById('map'), options);
+
+        //Add Marker
+        var optionsMarker = {
+            position: latlng,
+            map:map
+        };
+        var marker = new google.maps.Marker(optionsMarker);
+  
+
+    }
+
+
+    initMap();
+
+});
+
+
