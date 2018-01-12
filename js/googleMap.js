@@ -18,6 +18,7 @@ $(document).ready(function () {
             map:map
         };
         var marker = new google.maps.Marker(optionsMarker);
+        google.maps.event.trigger(map, 'resize');
 
     }
 
