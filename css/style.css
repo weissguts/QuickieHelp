@@ -104,7 +104,39 @@
     float: left;
 }
 
-#map {
+/*************************Maps******************/
+
+#mapOne {
+    height: 400px;
+    width: 100%;
+    overflow: visible;
+}
+
+#mapTwo {
+    height: 400px;
+    width: 100%;
+    overflow: visible;
+}
+
+#mapThree {
+    height: 400px;
+    width: 100%;
+    overflow: visible;
+}
+
+#mapFour {
+    height: 400px;
+    width: 100%;
+    overflow: visible;
+}
+
+#mapFive {
+    height: 400px;
+    width: 100%;
+    overflow: visible;
+}
+
+#mapSix {
     height: 400px;
     width: 100%;
     overflow: visible;
