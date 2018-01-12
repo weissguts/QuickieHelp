@@ -64,14 +64,14 @@ hr.star-light {
     color: #4ECDC4
 }
 
-#womenpic {
-    max-width: 100%;
-    height: auto;
-    width: auto\9;
-    position: relative;
-    display: inline-block;
-    z-index: 0
+.centered {
+    background: url("women.jpg") no-repeat;
+    height: 430px;
+    background-size: contain;
+    background-position: 50%;
+    z-index: 10;
 }
+
 
 #charityDropdown {
     font-weight: 700
@@ -85,7 +85,9 @@ hr.star-light {
     color: white;
     font-weight: bold
 }
-
+#dividerSection {
+    background-color: #2C3E50;
+}
 #createEvent {
     color: #1A535C
 }
@@ -93,7 +95,9 @@ hr.star-light {
 #testimonialSection {
     background-color: #4ECDC4
 }
-
+/*.row {
+    padding-left: 20%;
+}*/
 section {
     padding: 1rem 0
 }
@@ -359,11 +363,14 @@ form .row:first-child .floating-label-form-group {
 }
 
 .footer {
-    padding-top: 5rem;
+    padding-top: 10%;
     padding-bottom: 5rem;
     background-color: #2C3E50;
     color: #fff
 }
+.pt-0{
+    text-align: center;
+    padding-top: 10rem;
 }
 .copyright {
     background-color: #1a252f
