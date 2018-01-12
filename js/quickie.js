@@ -143,4 +143,6 @@ $("#add-event5").on("click", function() {
 $("#add-event6").on("click", function() {
   currentEvent = Event6;
   eventFun();
-})
+});
+
+
