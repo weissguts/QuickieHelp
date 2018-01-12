@@ -65,7 +65,7 @@ hr.star-light {
 }
 
 .centered {
-    background: url("women.jpg") no-repeat;
+    background: url("../img/women.jpg") no-repeat;
     height: 430px;
     background-size: contain;
     background-position: 50%;
@@ -208,7 +208,7 @@ section h2 {
     color: #1A535C;
     font-size: 20px;
     font-weight: 700;
-    text-align: left
+    text-align: left;
     margin-left: 5px;
 }
 
