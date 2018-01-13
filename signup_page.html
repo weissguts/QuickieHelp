@@ -39,11 +39,10 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" data-toggle="modal" data-target="#popUpWindow">log in</a>
+          <a id="loginNav" class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" data-toggle="modal" data-target="#popUpWindow">log in</a>
         </li>
         <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#signup">sign up</a>
-        </li>
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="signup_page.html" id="signupNav">sign up</a>
          <li class="nav-item mx-0 mx-lg-1">
           <div class="btn-group">
        <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="charityDropdown" href="#">
@@ -73,24 +72,34 @@
         <img class="img-circle" id="img_logo" src="img/spiral.png">
       </div>
       <div class="modal-header text-center">
-          <h3 class="modal-title">log in</h3>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <div id="loginDiv" class="main-class">
+
+    <h3>Firebase Login Example</h3>
+    <input type="email" placeholder="Email Goes Here" id="emailField">
+    <input type="password" placeholder="**********" id="passwordField">
+      <button id="loginAcount">Login to Acount</button>
+      <button id="createAcount">
+        Create an Acount
+
+      </button>
+
+
+   </div>
+
+   <div id="userDiv" class="loggedin-div">
+
+    <p id="userPara"> You've Made It to The Login Page! </p>
+    <button id="logOut">
+      Logout
+    </button>
+    <button id="verification">Send Verification
+    </button>
+   </div>
+
       </div>
-      <div class="modal-body text-center">
-        <form role="form">
-          <input type="email" class="form-control" placeholder="email" required>
-          <br>
-          <input type="password" class="form-control" placeholder="password" required>
-        </form>
-        <br>
-        <div class="checkbox text-left">
-                     <label>
-                       <input type="checkbox"> remember me
-                     </label>
-                 </div>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-primary">log in</button>
+        <button class="btn btn-primary">close</button>
       </div>
       <div>
                <button id="login_lost_btn" type="button" class="btn btn-link">lost password?</button>
@@ -103,6 +112,10 @@
 <header class="masthead bg-primary text-white text-center">
   <div>
     <img id="womenpic" src="img/signup.jpg" alt="signupnow">
+    <div class="centered d-none d-md-block">
+      <button type="button" id="signupbtn" class="btn btn-primary btn-lg"><a href="signup_page.html">sign up</button></a>
+  </div>
+
   </div>
 </header>
 
@@ -114,7 +127,7 @@
 </section>
 
 <div class="container">
-        <form class="form-horizontal">
+        <form class="form-horizontal" id="">
         <div class="form-group">
           <label for="firstName" class="col-sm-2 control-label">First Name</label>
           <div class="col-sm-10">
@@ -163,7 +176,7 @@
                   <input type="checkbox" id="historical" value="historical"> Historical
               </label>
               <br />
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary" id="add-user">Submit</button>
             </div>
         </div>
         </form>
@@ -220,6 +233,11 @@
     <i class="fa fa-chevron-up"></i>
   </a>
 </div>
+
+<!-- Firebase and script page links -->
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="./project1.js"></script>
 
 
 <!-- Bootstrap core JavaScript -->

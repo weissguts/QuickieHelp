@@ -24,7 +24,6 @@
   <!-- Custom styles for this template -->
   <link href="css/charity.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-  <link href="vendor/css/animate.css" rel="stylesheet">
 
 </head>
 
@@ -42,7 +41,7 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" data-toggle="modal" data-target="#popUpWindow" id="loginNav">log in</a>
+          <a id="loginNav" class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" data-toggle="modal" data-target="#popUpWindow">log in</a>
         </li>
         <li class="nav-item mx-0 mx-lg-1">
           <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="signup_page.html" id="signupNav">sign up</a>
@@ -54,10 +53,12 @@
               <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
-              <li class="dropdown-item"><a href="charity_eventpage.html">Create Event</a>
-              </li>
-              <li class="dropdown-item"><a href="aboutus_page.html">Learn More</a>
-              </li>
+              <li class="dropdown-item"> <a href="charity_eventpage.html">
+                create event
+              </li></a>
+              <li class="dropdown-item"><a href="aboutus_page.html">
+                learn more
+              </li></a>
             </ul>
           </div>
         </li>
@@ -66,102 +67,64 @@
   </div>
 </nav>
 
-<!--&lt;!&ndash; login modal &ndash;&gt;-->
-<!--<div class="modal fade" id="popUpWindow">-->
-	<!--<div class="modal-dialog">-->
-		<!--<div class="modal-content">-->
-			<!--<br>-->
-			<!--<div align="center">-->
-				<!--<img class="img-circle" id="img_logo" src="img/spiral.png">-->
-			<!--</div>-->
-			<!--<div class="modal-header text-center">-->
-					<!--<h3 class="modal-title">log in</h3>-->
-					<!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
-			<!--</div>-->
-			<!--<div class="modal-body text-center">-->
-				<!--<form role="form">-->
-					<!--<input type="email" class="form-control" placeholder="email" required>-->
-					<!--<br>-->
-					<!--<input type="password" class="form-control" placeholder="password" required>-->
-				<!--</form>-->
-				<!--<br>-->
-				<!--<div class="checkbox text-left">-->
-                     <!--<label>-->
-                       <!--<input type="checkbox"> remember me-->
-                     <!--</label>-->
-                 <!--</div>-->
-			<!--</div>-->
-			<!--<div class="modal-footer">-->
-				<!--<button class="btn btn-primary">log in</button>-->
-			<!--</div>-->
-			<!--<div>-->
-               <!--<button id="login_lost_btn" type="button" class="btn btn-link">lost password?</button>-->
-               <!--<button id="login_register_btn" type="button" class="btn btn-link" href="signup_page.html">sign-up</button>-->
-               <!--</div>-->
-		<!--</div>-->
-	<!--</div>-->
-<!--</div>-->
-
 <!-- login modal -->
 <div class="modal fade" id="popUpWindow">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <br>
-            <div align="center">
-                <img class="img-circle" id="img_logo" src="img/spiral.png">
-            </div>
-            <div class="modal-header text-center">
-                <div id="loginDiv" class="main-class">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <br>
+      <div align="center">
+        <img class="img-circle" id="img_logo" src="img/spiral.png">
+      </div>
+      <div class="modal-header text-center">
+          <div id="loginDiv" class="main-class">
 
-                    <h3>Firebase Login Example</h3>
-                    <input type="email" placeholder="Email Goes Here" id="emailField">
-                    <input type="password" placeholder="**********" id="passwordField">
-                    <button id="loginAcount">Login to Acount</button>
-                    <button id="createAcount">
-                        Create an Acount
+    <h3>Firebase Login Example</h3>
+    <input type="email" placeholder="Email Goes Here" id="emailField">
+    <input type="password" placeholder="**********" id="passwordField">
+      <button id="loginAcount">Login to Acount</button>
+      <button id="createAcount">
+        Create an Acount
 
-                    </button>
+      </button>
 
 
-                </div>
+   </div>
 
-                <div id="userDiv" class="loggedin-div">
+   <div id="userDiv" class="loggedin-div">
 
-                    <p id="userPara"> You've Made It to The Login Page! </p>
-                    <button id="logOut">
-                        Logout
-                    </button>
-                    <button id="verification">Send Verification
-                    </button>
-                </div>
+    <p id="userPara"> You've Made It to The Login Page! </p>
+    <button id="logOut">
+      Logout
+    </button>
+    <button id="verification">Send Verification
+    </button>
+   </div>
 
-            </div>
-            <div>
-                <button id="login_lost_btn" type="button" class="btn btn-link">lost password?</button>
-                <button id="login_register_btn" type="button" class="btn btn-link" href="signup_page.html">sign-up</button>
-            </div>
-        </div>
+      </div>
+      <div>
+               <button id="login_lost_btn" type="button" class="btn btn-link">lost password?</button>
+               <button id="login_register_btn" type="button" class="btn btn-link" href="signup_page.html">sign-up</button>
+               </div>
     </div>
+  </div>
 </div>
-
-
 <!-- Header -->
 <header class="masthead bg-primary text-white text-center">
   <div class="wrapper">
-  	<div class="centered d-none d-md-block">
-    	<!--<button type="button" id="signupbtn" class="btn btn-primary btn-lg"><a href="signup_page.html">sign up</a></button>-->
+    <div class="centered d-none d-md-block">
+      <button type="button" id="signupbtn" class="btn btn-primary btn-lg"><a href="signup_page.html">sign up</button></a>
   </div>
 </div>
 </header>
 
 <!-- Charity Grid Section -->
 <section class="charities" id="charities">
-  <div class="container-fluid animated slideInUp">
+  <div class="container-fluid">
     <h4 class="text-left text-secondary mb-0" id="volunteer">Volunteer Opportunities:</h4>
     <br>
     <div class="row">
       <div class="col-md-6 col-lg-4">
-        <a class="charity-item d-block mx-auto" href="#charity-modal-1" id="mapPuppy">
+        <a class="charity-item d-block mx-auto" href="#charity-modal-1">
           <div class="charity-item-caption d-flex position-absolute h-100 w-100">
             <div class="charity-item-caption-content my-auto w-100 text-center text-white">
               <i class="fa fa-search-plus fa-3x"></i>
@@ -171,7 +134,7 @@
         </a>
       </div>
       <div class="col-md-6 col-lg-4">
-        <a class="charity-item d-block mx-auto" href="#charity-modal-2" id="mapBfast">
+        <a class="charity-item d-block mx-auto" href="#charity-modal-2">
           <div class="charity-item-caption d-flex position-absolute h-100 w-100">
             <div class="charity-item-caption-content my-auto w-100 text-center text-white">
               <i class="fa fa-search-plus fa-3x"></i>
@@ -181,7 +144,7 @@
         </a>
       </div>
       <div class="col-md-6 col-lg-4">
-        <a class="charity-item d-block mx-auto" href="#charity-modal-3" id="mapEstes">
+        <a class="charity-item d-block mx-auto" href="#charity-modal-3">
           <div class="charity-item-caption d-flex position-absolute h-100 w-100">
             <div class="charity-item-caption-content my-auto w-100 text-center text-white">
               <i class="fa fa-search-plus fa-3x"></i>
@@ -191,7 +154,7 @@
         </a>
       </div>
       <div class="col-md-6 col-lg-4">
-        <a class="charity-item d-block mx-auto" href="#charity-modal-4" id="mapYouth">
+        <a class="charity-item d-block mx-auto" href="#charity-modal-4">
           <div class="charity-item-caption d-flex position-absolute h-100 w-100">
             <div class="charity-item-caption-content my-auto w-100 text-center text-white">
               <i class="fa fa-search-plus fa-3x"></i>
@@ -201,7 +164,7 @@
         </a>
       </div>
       <div class="col-md-6 col-lg-4">
-        <a class="charity-item d-block mx-auto" href="#charity-modal-5" id="mapConstruction">
+        <a class="charity-item d-block mx-auto" href="#charity-modal-5">
           <div class="charity-item-caption d-flex position-absolute h-100 w-100">
             <div class="charity-item-caption-content my-auto w-100 text-center text-white">
               <i class="fa fa-search-plus fa-3x"></i>
@@ -211,7 +174,7 @@
         </a>
       </div>
       <div class="col-md-6 col-lg-4">
-        <a class="charity-item d-block mx-auto" href="#charity-modal-6" id="mapTeach">
+        <a class="charity-item d-block mx-auto" href="#charity-modal-6">
           <div class="charity-item-caption d-flex position-absolute h-100 w-100">
             <div class="charity-item-caption-content my-auto w-100 text-center text-white">
               <i class="fa fa-search-plus fa-3x"></i>
@@ -226,7 +189,7 @@
 </section>
 
 <!-- Divider -->
-<section id="dividerSection" class="pb-3">
+<section id="dividerSection" class="pb-3 text-center">
 </section>
 
 
@@ -235,17 +198,17 @@
     <!--Section heading-->
     <h1 id="testimonialTitle" class="font-bold h1 py-5">Testimonials:</h1>
     <!--Section description-->
-    <div class="row container test-ava">
+    <div class="row">
 
         <!--Grid column-->
-        <div class="col-md-4 mb-r">
-    	  
+        <div class="col-lg-4 col-md-12 mb-r">
+        
             <!--Card-->
-            <div class="card">
+            <div class="card testimonial-card">
     
                 <!--Background color-->
                 <div class="card-up info-color"></div>
-    			<br>
+          <br>
                 <!--Avatar-->
                 <div class="avatar">
                     <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg" class="rounded-circle img-responsive">
@@ -268,15 +231,15 @@
         <!--Grid column-->
     
         <!--Grid column-->
-        <div class="col-md-4 mb-r">
+        <div class="col-lg-4 col-md-12 mb-r">
     
             <!--Card-->
-            <div class="card">
+            <div class="card testimonial-card">
     
                 <!--Background color-->
                 <div class="card-up blue-gradient">
                 </div>
-    			<br>
+          <br>
                 <!--Avatar-->
                 <div class="avatar">
                     <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" class="rounded-circle img-responsive">
@@ -289,7 +252,7 @@
                     </h4>
                     <hr>
                     <!--Quotation-->
-                    <p class="dark-grey-text">We met 6 months ago doing a charity event for Denver Rescue Mission. We still do Quickie events...but now we do it as a couple! We hope to see you out there giving back. Cheers!</p>
+                    <p class="dark-grey-text">We met 6 months ago doing a charity event for Denver Rescue Mission. We still do Quickie events...but now we do it as a couple!</p>
                 </div>
     
             </div>
@@ -299,14 +262,14 @@
         <!--Grid column-->
     
         <!--Grid column-->
-        <div class="col-md-4 mb-r">
+        <div class="col-lg-4 col-md-12 mb-r">
     
             <!--Card-->
             <div class="card testimonial-card">
     
                 <!--Background color-->
                 <div class="card-up indigo"></div>
-    			<br>
+          <br>
                 <!--Avatar-->
                 <div class="avatar">
                     <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg" class="rounded-circle img-responsive">
@@ -388,7 +351,7 @@
   </a>
 </div>
 
-<!-------------------------------- Charity Modals ----------------------------------------------->
+<!-- Charity Modals -->
 
 <!-- Charity Modal 1 -->
 <div class="charity-modal mfp-hide" id="charity-modal-1">
@@ -402,27 +365,24 @@
        <h2 class="text-secondary mb-0">Event Details:</h2>
           
           <img class="img-fluid mb-5" src="img/charity_top/puppyrun.PNG" alt="">
-          <p class="mb-5">Tails are waggin’ because the Puppy Run is BACK! For a third human-year, our favorite (not to mention irresistibly adorable) cuddle-monsters are taking over the interwebs. Join the newest puppy stampede with this 5K, 10K, and half marathon!</p>
-            <div id="mapOne">
-            </div>
-            <br>
-          <a href="#signin"><img src="img/google_signin.png" class="authorize-button"></a>
+          <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+          <a href="#signin"><img src="img/google_signin.png" id="authorize-button"></a>
           <a href="#signin"><img src="img/google_cal.png" id="add-event"></a>
-            <pre class="content"></pre>
+            <pre id="content"></pre>
           <script>
           let Event = {
             'summary': 'Dog Dash',
-			'location': 'Dumb Friends League',
-			'description': 'Come meet fellow dog lovers at the 3rd annual Puppy Run. Registered at the event. $5 entrance fee. Water and snacks included throughout the run.',
-			'start': {
-			'dateTime': '2018-01-31T08:00:00-08:00',
-			'timeZone': 'America/Denver',
-			},
-			'end': {
-			'dateTime': '2018-01-31T14:00:00-08:00',
-			'timeZone': 'America/Denver',
-			},
-			};
+      'location': 'Dumb Friends League',
+      'description': 'Come meet fellow dog lovers at the 3rd annual Puppy Run. Registered at the event. $5 entrance fee. Water and snacks included throughout the run.',
+      'start': {
+      'dateTime': '2018-01-31T08:00:00-08:00',
+      'timeZone': 'America/Denver',
+      },
+      'end': {
+      'dateTime': '2018-01-31T14:00:00-08:00',
+      'timeZone': 'America/Denver',
+      },
+      };
           </script>
         </div>
       </div>
@@ -443,29 +403,24 @@
           <h2 class="text-secondary mb-0">Event Details:</h2>
           
           <img class="img-fluid mb-5" src="img/charity_top/breakfast.PNG" alt="">
-          <p class="mb-5">Please join HRC Colorado in supporting local homeless and at-risk youth this MLK Day!
-              We'll be preparing and serving breakfast for youth at The Drop-in Center from 7:30am - 10:00am. There are a limited number of spots! Only 6 people are allowed in the kitchen, so first come first serve! Must be 18+ to volunteer.
-              If you have any questions please reach out to Danica Shipley at community@hrccolorado.org.</p>
-            <div id="mapTwo">
-            </div>
-            <br>
-          <a href="#signin"><img src="img/google_signin.png" class="authorize-button"></a>
+          <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+          <a href="#signin"><img src="img/google_signin.png" id="authorize-button"></a>
           <a href="#signin"><img src="img/google_cal.png" id="add-event2"></a>
-        	<pre class="content"></pre>
+          <pre id="content"></pre>
             <script>
             let Event2 = {
               'summary': 'Breakfast for Homeless Youth',
-			  'location': 'Urban Peak',
-			  'description': "Urban Peak is looking for community members interested in serving a hot breakfast to our community's homeless youth. Time commitments of 2-3 hours, and all supplies provided.",
-			  'start': {
-			  'dateTime': '2018-02-02T07:00:00-08:00',
-			  'timeZone': 'America/Denver',
-			  },
-			  'end': {
-			  'dateTime': '2018-02-02T10:00:00-08:00',
-			  'timeZone': 'America/Denver',
-			  },
-			  };
+        'location': 'Urban Peak',
+        'description': "Urban Peak is looking for community members interested in serving a hot breakfast to our community's homeless youth. Time commitments of 2-3 hours, and all supplies provided.",
+        'start': {
+        'dateTime': '2018-02-02T07:00:00-08:00',
+        'timeZone': 'America/Denver',
+        },
+        'end': {
+        'dateTime': '2018-02-02T10:00:00-08:00',
+        'timeZone': 'America/Denver',
+        },
+        };
             </script>
         </div>
       </div>
@@ -485,27 +440,24 @@
           <h2 class="text-secondary mb-0">Event Details:</h2>
          
           <img class="img-fluid mb-5" src="img/charity_top/park.PNG" alt="">
-          <p class="mb-5">EVRPD, along with their partners Rotary Club of Estes Park, the Town of Estes Park, Rocky Mountain Dumpsters, and Starbucks, will hold their annual Estes Park Spring Cleanup Day on Saturday, April 29, 2017, from 9-11 a.m. Hope to see you there!</p>
-            <div id="mapThree">
-            </div>
-            <br>
-          <a href="#signin"><img src="img/google_signin.png" class="authorize-button"></a>
+          <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+          <a href="#signin"><img src="img/google_signin.png" id="authorize-button"></a>
           <a href="#signin"><img src="img/google_cal.png" id="add-event3"></a>
-        <pre class="content"></pre>
+        <pre id="content"></pre>
             <script>
             let Event3 = {
               'summary': 'Estes Park Clean Up',
-		  'location': 'Estes Park',
-		  'description': "One of our state's greatest parks is in need of some clean-up. Hike the beautiful trail, meet new people, and restore our environment.",
-		  'start': {
-		  'dateTime': '2018-02-12T11:00:00-08:00',
-		  'timeZone': 'America/Denver',
-		  },
-		  'end': {
-		  'dateTime': '2018-02-12T14:00:00-08:00',
-		  'timeZone': 'America/Denver',
-		  },
-		  };
+      'location': 'Estes Park',
+      'description': "One of our state's greatest parks is in need of some clean-up. Hike the beautiful trail, meet new people, and restore our environment.",
+      'start': {
+      'dateTime': '2018-02-12T11:00:00-08:00',
+      'timeZone': 'America/Denver',
+      },
+      'end': {
+      'dateTime': '2018-02-12T14:00:00-08:00',
+      'timeZone': 'America/Denver',
+      },
+      };
             </script>
         </div>
       </div>
@@ -525,28 +477,24 @@
           <h2 class="text-secondary mb-0">Event Details:</h2>
           
           <img class="img-fluid mb-5" src="img/charity_top/mentor.PNG" alt="">
-          <p class="mb-5">Whether it’s the loss of a job or the rising cost of housing, homelessness has complicated causes and devastating effects on men, women and families in our community.
-              Being homeless often means feeling hopeless, but we believe we can change this situation for our homeless friends and neighbors by meeting them at their physical and spiritual points of need. We follow Jesus’ example by walking alongside the people we serve through emergency services, rehabilitation, transitional programs, and community outreach.</p>
-            <div id="mapFour">
-            </div>
-            <br>
-        	<a href="#signin"><img src="img/google_signin.png" class="authorize-button"></a>
- 			<a href="#signin"><img src="img/google_cal.png" id="add-event4"></a>
-            <pre class="content"></pre>
+          <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+          <a href="#signin"><img src="img/google_signin.png" id="authorize-button"></a>
+      <a href="#signin"><img src="img/google_cal.png" id="add-event4"></a>
+            <pre id="content"></pre>
             <script>
             let Event4 = {
               'summary': 'Youth Mentors',
-			  'location': 'Denver Rescue Mission',
-			  'description': "The Denver Rescue Mission is looking for mentors between the ages of 25-40 to mentor area youth. Mentoring includes weekly check-ins, monthly meet-ups, and lifelong connections.",
-			  'start': {
-			  'dateTime': '2018-02-18T11:00:00-08:00',
-			  'timeZone': 'America/Denver',
-			  },
-			  'end': {
-			  'dateTime': '2018-02-18T14:00:00-08:00',
-			  'timeZone': 'America/Denver',
-			  },
-			  };
+        'location': 'Denver Rescue Mission',
+        'description': "The Denver Rescue Mission is looking for mentors between the ages of 25-40 to mentor area youth. Mentoring includes weekly check-ins, monthly meet-ups, and lifelong connections.",
+        'start': {
+        'dateTime': '2018-02-18T11:00:00-08:00',
+        'timeZone': 'America/Denver',
+        },
+        'end': {
+        'dateTime': '2018-02-18T14:00:00-08:00',
+        'timeZone': 'America/Denver',
+        },
+        };
             </script>
         </div>
       </div>
@@ -565,27 +513,24 @@
         <div class="col-lg-8 mx-auto">
           <h2 class="text-secondary mb-0">Event Details</h2>
           <img class="img-fluid mb-5" src="img/charity_top/home.PNG" alt="">
-          <p class="mb-5">Volunteers are the heart and soul of Habitat for Humanity of Metro Denver. Whether you're an individual, corporate team, community/faith-based group, or just a handful of friends, there are many different ways for you to volunteer. No prior experience is necessary - we’ll show you what to do!</p>
-            <div id="mapFive">
-            </div>
-            <br>
-          <a href="#signin"><img src="img/google_signin.png" class="authorize-button"></a>
+          <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+          <a href="#signin"><img src="img/google_signin.png" id="authorize-button"></a>
           <a href="#signin"><img src="img/google_cal.png" id="add-event5"></a>
-             <pre class="content"></pre>
+             <pre id="content"></pre>
             <script>
             let Event5 = {
               'summary': 'Construction Function',
-			  'location': 'Habitat for Humanity',
-			  'description': "Build a house. Create a home. Habitat for Humanity is looking for community members to work weekend building shifts. No experience needed. Bring your own gloves and hammer.",
-			  'start': {
-			  'dateTime': '2018-01-26T08:00:00-08:00',
-			  'timeZone': 'America/Denver',
-			  },
-			  'end': {
-			  'dateTime': '2018-01-26T15:00:00-08:00',
-			  'timeZone': 'America/Denver',
-			  },
-			  };
+        'location': 'Habitat for Humanity',
+        'description': "Build a house. Create a home. Habitat for Humanity is looking for community members to work weekend building shifts. No experience needed. Bring your own gloves and hammer.",
+        'start': {
+        'dateTime': '2018-01-26T08:00:00-08:00',
+        'timeZone': 'America/Denver',
+        },
+        'end': {
+        'dateTime': '2018-01-26T15:00:00-08:00',
+        'timeZone': 'America/Denver',
+        },
+        };
             </script>
         </div>
       </div>
@@ -605,28 +550,24 @@
           <h2 class="text-secondary mb-0">Event Details:</h2>
           
           <img class="img-fluid mb-5" src="img/charity_top/teach.PNG" alt="">
-          <p class="mb-5">The Coalition is a national leader in providing integrated housing, health care, vocational
-              and supportive services, creating lasting solutions to homelessness. Connect with us and learn how we create lasting solutions to homelessness.</p>
-            <div id="mapSix">
-            </div>
-            <br>
-          <a href="#signin"><img src="img/google_signin.png" class="authorize-button"></a>
+          <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+          <a href="#signin"><img src="img/google_signin.png" id="authorize-button"></a>
           <a href="#signin"><img src="img/google_cal.png" id="add-event6"></a>
-              <pre class="content"></pre>
+              <pre id="content"></pre>
             <script>
             let Event6 = {
               'summary': 'Teach Art',
-			  'location': 'Coalition for the Homeless',
-			  'description': "Art is the foundation of education. Help area youth discover art and their creative side. Multiple times available--information session on the 1st of Feb.",
-			  'start': {
-			  'dateTime': '2018-02-01T18:00:00-08:00',
-			  'timeZone': 'America/Denver',
-			  },
-			  'end': {
-			  'dateTime': '2018-02-01T20:00:00-08:00',
-			  'timeZone': 'America/Denver',
-			  },
-			  };
+        'location': 'Coalition for the Homeless',
+        'description': "Art is the foundation of education. Help area youth discover art and their creative side. Multiple times available--information session on the 1st of Feb.",
+        'start': {
+        'dateTime': '2018-02-01T18:00:00-08:00',
+        'timeZone': 'America/Denver',
+        },
+        'end': {
+        'dateTime': '2018-02-01T20:00:00-08:00',
+        'timeZone': 'America/Denver',
+        },
+        };
             </script>
         </div>
       </div>
@@ -635,12 +576,10 @@
 </div>
 
 </body>
-
 <!-- Firebase and script page links -->
 <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="project1.js"></script>
-
+<script type="text/javascript" src="./project1.js"></script>
 
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
@@ -659,8 +598,9 @@
         async defer></script>
 <script src="js/charity.min.js"></script>
 <script src="js/quickie.js"></script>
-<script src="js/googleMap.js"></script>
 <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+
+
 
 
 
