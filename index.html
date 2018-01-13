@@ -42,10 +42,10 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" data-toggle="modal" data-target="#popUpWindow">log in</a>
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" data-toggle="modal" data-target="#popUpWindow" id="loginNav">log in</a>
         </li>
         <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="signup_page.html">sign up</a>
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="signup_page.html" id="signupNav">sign up</a>
         </li>
         <li class="nav-item mx-0 mx-lg-1">
           <div class="btn-group">
@@ -66,40 +66,82 @@
   </div>
 </nav>
 
+<!--&lt;!&ndash; login modal &ndash;&gt;-->
+<!--<div class="modal fade" id="popUpWindow">-->
+	<!--<div class="modal-dialog">-->
+		<!--<div class="modal-content">-->
+			<!--<br>-->
+			<!--<div align="center">-->
+				<!--<img class="img-circle" id="img_logo" src="img/spiral.png">-->
+			<!--</div>-->
+			<!--<div class="modal-header text-center">-->
+					<!--<h3 class="modal-title">log in</h3>-->
+					<!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
+			<!--</div>-->
+			<!--<div class="modal-body text-center">-->
+				<!--<form role="form">-->
+					<!--<input type="email" class="form-control" placeholder="email" required>-->
+					<!--<br>-->
+					<!--<input type="password" class="form-control" placeholder="password" required>-->
+				<!--</form>-->
+				<!--<br>-->
+				<!--<div class="checkbox text-left">-->
+                     <!--<label>-->
+                       <!--<input type="checkbox"> remember me-->
+                     <!--</label>-->
+                 <!--</div>-->
+			<!--</div>-->
+			<!--<div class="modal-footer">-->
+				<!--<button class="btn btn-primary">log in</button>-->
+			<!--</div>-->
+			<!--<div>-->
+               <!--<button id="login_lost_btn" type="button" class="btn btn-link">lost password?</button>-->
+               <!--<button id="login_register_btn" type="button" class="btn btn-link" href="signup_page.html">sign-up</button>-->
+               <!--</div>-->
+		<!--</div>-->
+	<!--</div>-->
+<!--</div>-->
+
 <!-- login modal -->
 <div class="modal fade" id="popUpWindow">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<br>
-			<div align="center">
-				<img class="img-circle" id="img_logo" src="img/spiral.png">
-			</div>
-			<div class="modal-header text-center">
-					<h3 class="modal-title">log in</h3>
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-			</div>
-			<div class="modal-body text-center">
-				<form role="form">
-					<input type="email" class="form-control" placeholder="email" required>
-					<br>
-					<input type="password" class="form-control" placeholder="password" required>
-				</form>
-				<br>
-				<div class="checkbox text-left">
-                     <label>
-                       <input type="checkbox"> remember me
-                     </label>
-                 </div>
-			</div>
-			<div class="modal-footer">
-				<button class="btn btn-primary">log in</button>
-			</div>
-			<div>
-               <button id="login_lost_btn" type="button" class="btn btn-link">lost password?</button>
-               <button id="login_register_btn" type="button" class="btn btn-link" href="signup_page.html">sign-up</button>
-               </div>
-		</div>
-	</div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <br>
+            <div align="center">
+                <img class="img-circle" id="img_logo" src="img/spiral.png">
+            </div>
+            <div class="modal-header text-center">
+                <div id="loginDiv" class="main-class">
+
+                    <h3>Firebase Login Example</h3>
+                    <input type="email" placeholder="Email Goes Here" id="emailField">
+                    <input type="password" placeholder="**********" id="passwordField">
+                    <button id="loginAcount">Login to Acount</button>
+                    <button id="createAcount">
+                        Create an Acount
+
+                    </button>
+
+
+                </div>
+
+                <div id="userDiv" class="loggedin-div">
+
+                    <p id="userPara"> You've Made It to The Login Page! </p>
+                    <button id="logOut">
+                        Logout
+                    </button>
+                    <button id="verification">Send Verification
+                    </button>
+                </div>
+
+            </div>
+            <div>
+                <button id="login_lost_btn" type="button" class="btn btn-link">lost password?</button>
+                <button id="login_register_btn" type="button" class="btn btn-link" href="signup_page.html">sign-up</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 
@@ -593,6 +635,12 @@
 </div>
 
 </body>
+
+<!-- Firebase and script page links -->
+<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="project1.js"></script>
+
 
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
