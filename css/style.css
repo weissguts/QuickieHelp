@@ -145,7 +145,16 @@
 /*Testimonials*/
 
 .test-ava {
-    text-align: center; !important;
+    text-align: center !important;
+    display: inline-block;
 
 }
 
+.gridCard {
+    float: left;
+
+}
+
+.card {
+    height: 547px !important;
+}
