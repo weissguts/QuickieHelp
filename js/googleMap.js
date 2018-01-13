@@ -1,5 +1,10 @@
 $(document).ready(function () {
 
+    for (var i = 0; i < 100; i++) {
+        $('#age').append('    <option value= "'+i+'">'+i+'</option> ')
+        // console.log(i);
+    };
+
     /*****************Google Map init functions for six base templates. Currently pre-loaded**********************/
     //Calls google map based on latitude / longitude.
     function initMapOne() {
