@@ -24,6 +24,11 @@ var database = firebase.database();
     var password = "";
     var age = 0;
     var gender = "";
+    var animals = "";
+    var foodKitchen = "";
+    var foodBank = "";
+    var science = "";
+    var history = "";
 
     
     
@@ -38,6 +43,14 @@ var database = firebase.database();
       password = $("#password").val().trim();
       age = $("#age").val().trim();
       gender = $("#gender").val().trim();
+      animals = $("#animals").val().trim();
+      foodKitchen = $("#foodKitchen").val().trim();
+      foodBank = $("#foodBank").val().trim();
+      science = $("#science").val().trim();
+      history = $("#history").val().trim();
+
+
+
 
         createAcount();
       
@@ -47,11 +60,18 @@ var database = firebase.database();
         email: email,
         password: password,
         age: age,
-        gender: gender
+        gender: gender,
+        interest: animals,
+        interest1: foodKitchen,
+        interest2: foodBank,
+        interest3: science,
+        interest4: history
+
 
         
       });
       // $("#signupForm").reset();
+       $("#formReset").get(0).reset();
     });
 
  database.ref().on("value", function(snapshot) {
