@@ -113,6 +113,13 @@ section h2 {
         line-height: 2.5rem
     }
 }
+@media (max-width:992px) {
+    #charities{
+        padding-top: 120px;
+    }
+}
+
+
 
 .btn-xl {
     padding: 1rem 1.75rem;
@@ -273,6 +280,7 @@ header.masthead h2 {
 }
 
 .charity-modal .charity-modal-dialog {
+    display: list-item;
     padding: 3rem 1rem;
     min-height: calc(100vh - 2rem);
     margin: 1rem calc(1rem - 8px);
