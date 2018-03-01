@@ -19,7 +19,7 @@ var lastName = "";
 var email = "";
 var password = "";
 var age = 0;
-var gender = "";
+var interests = "";
 
 
 
@@ -33,7 +33,7 @@ $("#add-user").on("click", function() {
     email = $("#email").val().trim();
     password = $("#password").val().trim();
     age = $("#age").val().trim();
-    gender = $("#gender").val().trim();
+    interests = $("#interests").val().trim();
 
     createAcount();
 
@@ -43,7 +43,7 @@ $("#add-user").on("click", function() {
         email: email,
         password: password,
         age: age,
-        gender: gender
+        gender: interests
 
 
     });
