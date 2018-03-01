@@ -13,27 +13,29 @@ $.get("/api/all", function(data) {
     }
 });
 // When user chirps (clicks addBtn)
-$("#chirp-submit").on("click", function(event) {
+$("#signup-btn-submit").on("click", function(event) {
     event.preventDefault();
-    // Make a newChirp object
-    var newChirp = {
-        firstname: $("#author").val().trim(),
-        lastname: $("#chirp-box").val().trim(),
+    // Make a newUser object
+    var newUser = {
+        firstname: $("#firstName").val().trim(),
+        lastname: $("#lastName").val().trim(),
+        email: $("#email").val().trim(),
+        password: $("#password").val().trim(),
+        // age: $("#age").val().trim(),
+        // interests: $("#interests").val().trim(),
         created_at: moment().format("YYYY-MM-DD HH:mm:ss")
     };
-    console.log(newChirp);
+    console.log(newUser);
     // Send an AJAX POST-request with jQuery
-    $.post("/api/new", newChirp)
-    // On success, run the following code
-        .then(function() {
-            var row = $("<div>");
-            row.addClass("chirp");
-            row.append("<p>" + newChirp.firstname + " chirped: </p>");
-            row.append("<p>" + newChirp.lastname + "</p>");
-            row.append("<p>At " + moment(newChirp.created_at).format("h:mma on dddd") + "</p>");
-            $("#chirp-area").prepend(row);
-        });
+
+    $.post("/api/new", newUser)
+
+
     // Empty each input box by replacing the value with an empty string
-    $("#author").val("");
-    $("#chirp-box").val("");
+    $("#firstName").val("");
+    $("#lastName").val("");
+    $("#email").val("");
+    $("#password").val("");
+    // $("#age").val("");
+    // $("#interests").val("");
 });
