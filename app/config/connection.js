@@ -3,25 +3,26 @@
 // *********************************************************************************
 
 
-// mysql://bb339923bd0c2f:86dd5691@us-cdbr-iron-east-05.cleardb.net/heroku_9cd01df6b2ae19e?reconnect=true
+// mysql://b9r88oj2hf66ji45:tcuoj5gq2irjwvpg@y0nkiij6humroewt.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/p9ba4rxuwzc4pgoz
+
 // Require mysql
 var mysql = require("mysql");
 // Set up connection information
-var connection = mysql.createConnection({
-    port: 3306,
-    host: "us-cdbr-iron-east-05.cleardb.net",
-    user: "bb339923bd0c2f",
-    password: "86dd5691",
-    database: "heroku_9cd01df6b2ae19e"
-});
-// Connect to the database
-connection.connect(function(err) {
-    if (err) {
-        console.error("error connecting: " + err.stack);
-        return;
-    }
-    console.log("connected as id " + connection.threadId);
-});
+var connection;
+if(process.env.JAWSDB_URL) {
+    //Heroku deployment
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+    //local host
+    connection = mysql.createConnection({
+        root: 3000,
+        host: "localhost",
+        user: "root",
+        password: "root",
+        database: "p9ba4rxuwzc4pgoz"
+    });
+}
+
 // Export connection
-module.exports = connection;
+// module.exports = connection;
 
