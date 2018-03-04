@@ -15,5 +15,11 @@ module.exports = function(app) {
     app.get("/signup", function(req, res) {
         res.sendFile(path.join(__dirname, "../public/signup_page_heroku.html"));
     });
+    app.get("/charity-create-event", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/charity_eventpage_heroku.html"));
+    });
+    app.get("/aboutus", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/aboutus_page_heroku.html"));
+    });
 
 };
