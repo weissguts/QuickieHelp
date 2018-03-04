@@ -9,7 +9,7 @@ var db = require("../models");
 module.exports = function(app) {
     // Get all users
     app.get("/api/all/", function(req, res) {
-        db.Post.findAll({})
+        db.User.findAll({})
             .then(function(dbPost) {
                 res.json(dbPost);
             });
@@ -18,7 +18,7 @@ module.exports = function(app) {
     //Add a user -* Sequelize Code
     app.post("/api/new", function(req, res) {
         console.log(req.body);
-        db.Post.create({
+        db.User.create({
             firstname: req.body.firstname,
             lastname: req.body.lastname,
             email: req.body.email,
