@@ -17,7 +17,7 @@ $("#signup-btn-submit").on("click", function(event) {
     console.log(newUser);
     // Send an AJAX POST-request with jQuery
 
-    $.post("/api/users", newUser)
+    $.post("/api/users", newUser);
 
 
     // Empty each input box by replacing the value with an empty string

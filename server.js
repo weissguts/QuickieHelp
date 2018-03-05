@@ -19,11 +19,25 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 // Static directory
 app.use(express.static("public"));
+
+// Set Handlebars as View Engine.
+var exphbs = require("express-handlebars");
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
 // Routes
 // =============================================================
-require("./routes/api-routes_user.js")(app);
-require("./routes/api-routes_charity")(app);
-require("./routes/html-routes.js")(app);
+// require("./controllers/user_controller.js")(app);
+// require("./controllers/charity_controller.js")(app);
+
+require("./controllers/user_controller.js")(app);
+require("./controllers/charity_controller.js")(app);
+require("./controllers/index.js")(app);
+require("./controllers/aboutus.js")(app);
+
+
+
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
 db.sequelize.sync({ force: false }).then(function() {

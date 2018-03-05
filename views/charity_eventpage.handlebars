@@ -1,0 +1,208 @@
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
+    <div class="container-fluid">
+        <a class="navbar-brand js-scroll-trigger" href="index.html"><img src="../public/img/logo.png" alt="logo"></a>
+        <button class="navbar-toggler navbar-toggler-right bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" data-toggle="modal" data-target="#popUpWindow">log in</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="signup_page_heroku.html">sign up</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <div class="btn-group">
+                        <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="charityDropdown" href="#">
+                            charities
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item"><a href="charity_eventpage_heroku.html">Create Event</a>
+                            </li>
+                            <li class="dropdown-item"><a href="aboutus_page_heroku.html">Learn More</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- login modal -->
+<div class="modal fade" id="popUpWindow">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <br>
+            <div align="center">
+                <img class="img-circle" id="img_logo" src="../public/img/spiral.png">
+            </div>
+            <div class="modal-header text-center">
+                <h3 class="modal-title">log in</h3>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body text-center">
+                <form role="form">
+                    <input type="email" class="form-control" placeholder="email" required>
+                    <br>
+                    <input type="password" class="form-control" placeholder="password" required>
+                </form>
+                <br>
+                <div class="checkbox text-left">
+                    <label>
+                        <input type="checkbox"> remember me
+                    </label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary">log in</button>
+            </div>
+            <div>
+                <button id="login_lost_btn" type="button" class="btn btn-link">lost password?</button>
+                <button id="login_register_btn" type="button" class="btn btn-link" href="signup_page_heroku.html">sign-up</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header -->
+<header class="masthead bg-primary text-white text-center">
+    <div>
+        <img id="womenpic" src="../public/img/create_img.jpg" alt="createEvent">
+    </div>
+</header>
+
+<!-- Sign-up section -->
+<section class="bg-primary text-black mb-0" id="charitySignup">
+    <div class="container">
+        <h2 class="text-left" id="createEvent">Create an event</h2>
+        <p>Events will be vetted by staff to ensure accuracy. You'll receive an email update when the event has been published. </p>
+    </div>
+
+</section>
+
+<div class="container">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="organizationo" class="col-sm-2 control-label">Organization</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="organizationo" placeholder="Org" type="text" maxlength="25">
+            </div>
+            <label for="orgwebsiteo" class="col-sm-2 control-label">Org Website</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="orgwebsiteo" placeholder="Org Website" type="text" maxlength="25">
+            </div>
+            <label for="firstnameo" class="col-sm-2 control-label">First Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="firstnameo" placeholder="John">
+            </div>
+            <label for="lastnameo" class="col-sm-2 control-label">Last Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="lastnameo" placeholder="Smith" type="text" maxlength="10">
+            </div>
+            <label for="titleo" class="col-sm-2 control-label">Title</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="titleo" placeholder="President" type="text" maxlength="10">
+            </div>
+            <label for="emailo" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="emailo" placeholder="email@gmail.com" type="text" maxlength="10">
+            </div>
+            <label for="eventnameo" class="col-sm-2 control-label">Event Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="eventnameo" placeholder="Puppy Run" type="text" maxlength="10">
+            </div>
+            <label for="descriptiono" class="col-sm-2 control-label">Event Description</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="descriptiono" placeholder="Run with Puppies" type="text" maxlength="10">
+            </div>
+            <label for="eventdateo" class="col-sm-2 control-label">Event Date</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="eventdateo" placeholder="MM/DD/YYYY" type="text" maxlength="10">
+            </div>
+            <label for="eventtimeo" class="col-sm-2 control-label">Event Time</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="eventtimeo" placeholder="MT:MT" type="text" maxlength="10">
+            </div>
+            <label for="eventlocationo" class="col-sm-2 control-label">Event Location</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="eventlocationo" placeholder="City Park" type="text" maxlength="10">
+            </div>
+            <label for="userinterestdescriptiono" class="col-sm-2 control-label">Volunteer Interest Description</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="userinterestdescriptiono" placeholder="People who like puppies" type="text" maxlength="10">
+            </div>
+
+
+            <br>
+            <button type="submit" class="btn btn-primary" id="charity-btn-submit">Submit</button>
+        </div>
+</div>
+</form>
+<br>
+<!--Footer-->
+<footer class="page-footer indigo center-on-small-only pt-0">
+
+    <!--Footer Links-->
+    <div class="container-fluid">
+
+        <!--First row-->
+        <div class="row">
+            <div class="col-md-12">
+
+                <div id="socialmedia" class="footer-socials mb-5">
+
+                    <!--Facebook-->
+                    <a class="icons-sm fb-ic"><i class="fa fa-facebook fa-lg white-text mr-md-4"> </i></a>
+                    <!--Twitter-->
+                    <a class="icons-sm tw-ic"><i class="fa fa-twitter fa-lg white-text mr-md-4"> </i></a>
+                    <!--Google +-->
+                    <a class="icons-sm gplus-ic"><i class="fa fa-google-plus fa-lg white-text mr-md-4"> </i></a>
+
+                    <!--Instagram-->
+                    <a class="icons-sm ins-ic"><i class="fa fa-instagram fa-lg white-text mr-md-4"> </i></a>
+                    <!--Pinterest-->
+                    <a class="icons-sm pin-ic"><i class="fa fa-pinterest fa-lg white-text"> </i></a>
+                </div>
+            </div>
+            <!--/First column-->
+        </div>
+        <!--/First row-->
+    </div>
+    <!--/Footer Links-->
+    <br>
+    <!--Copyright-->
+    <div id="copyright" class="footer-copyright">
+        <div class="container">
+            © 2018 Copyright: QuickieHelp
+        </div>
+    </div>
+    <!--/Copyright-->
+
+</footer>
+<!--/Footer-->
+
+
+
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+<div class="scroll-to-top d-lg-none position-fixed ">
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

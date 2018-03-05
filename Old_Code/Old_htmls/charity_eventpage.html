@@ -11,18 +11,18 @@
   <title>QuickieHelp</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom fonts for this template -->
-  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
   <!-- Plugin CSS -->
-  <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+  <link href="../vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
 
   <!-- Custom styles for this template -->
-  <link href="css/charity.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="../css/charity.min.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
 
 
 
@@ -33,7 +33,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
   <div class="container-fluid">
-    <a class="navbar-brand js-scroll-trigger" href="index.html"><img src="img/logo.png" alt="logo"></a>
+    <a class="navbar-brand js-scroll-trigger" href="index.html"><img src="../img/logo.png" alt="logo"></a>
     <button class="navbar-toggler navbar-toggler-right bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       Menu
       <i class="fa fa-bars"></i>
@@ -44,7 +44,7 @@
           <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" data-toggle="modal" data-target="#popUpWindow">log in</a>
         </li>
         <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="signup_page_heroku.html">sign up</a>
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="signup_page.html">sign up</a>
         </li>
          <li class="nav-item mx-0 mx-lg-1">
           <div class="btn-group">
@@ -53,9 +53,9 @@
          <span class="caret"></span>
        </a>
         <ul class="dropdown-menu">
-            <li class="dropdown-item"><a href="charity_eventpage_heroku.html">Create Event</a>
+            <li class="dropdown-item"><a href="charity_eventpage.html">Create Event</a>
             </li>
-            <li class="dropdown-item"><a href="aboutus_page_heroku.html">Learn More</a>
+            <li class="dropdown-item"><a href="aboutus_page.html">Learn More</a>
             </li>
         </ul>
       </div>
@@ -70,7 +70,7 @@
     <div class="modal-content">
       <br>
       <div align="center">
-        <img class="img-circle" id="img_logo" src="img/spiral.png">
+        <img class="img-circle" id="img_logo" src="../img/spiral.png">
       </div>
       <div class="modal-header text-center">
           <h3 class="modal-title">log in</h3>
@@ -94,7 +94,7 @@
       </div>
       <div>
                <button id="login_lost_btn" type="button" class="btn btn-link">lost password?</button>
-               <button id="login_register_btn" type="button" class="btn btn-link" href="signup_page_heroku.html">sign-up</button>
+               <button id="login_register_btn" type="button" class="btn btn-link" href="signup_page.html">sign-up</button>
                </div>
     </div>
   </div>
@@ -102,7 +102,7 @@
 <!-- Header -->
 <header class="masthead bg-primary text-white text-center">
   <div>
-    <img id="womenpic" src="img/create_img.jpg" alt="createEvent">
+    <img id="womenpic" src="../img/create_img.jpg" alt="createEvent">
   </div>
 </header>
 
@@ -116,63 +116,42 @@
 </section>
 
 <div class="container">
-    <form class="form-horizontal">
-        <div class="form-group">
-            <label for="organizationo" class="col-sm-2 control-label">Organization</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="organizationo" placeholder="Org" type="text" maxlength="25">
-            </div>
-            <label for="orgwebsiteo" class="col-sm-2 control-label">Org Website</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="orgwebsiteo" placeholder="Org Website" type="text" maxlength="25">
-            </div>
-            <label for="firstnameo" class="col-sm-2 control-label">First Name</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="firstnameo" placeholder="John">
-            </div>
-            <label for="lastnameo" class="col-sm-2 control-label">Last Name</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="lastnameo" placeholder="Smith" type="text" maxlength="10">
-            </div>
-            <label for="titleo" class="col-sm-2 control-label">Title</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="titleo" placeholder="President" type="text" maxlength="10">
-            </div>
-            <label for="emailo" class="col-sm-2 control-label">Email</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="emailo" placeholder="email@gmail.com" type="text" maxlength="10">
-            </div>
-            <label for="eventnameo" class="col-sm-2 control-label">Event Name</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="eventnameo" placeholder="Puppy Run" type="text" maxlength="10">
-            </div>
-            <label for="descriptiono" class="col-sm-2 control-label">Event Description</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="descriptiono" placeholder="Run with Puppies" type="text" maxlength="10">
-            </div>
-            <label for="eventdateo" class="col-sm-2 control-label">Event Date</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="eventdateo" placeholder="MM/DD/YYYY" type="text" maxlength="10">
-            </div>
-            <label for="eventtimeo" class="col-sm-2 control-label">Event Time</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="eventtimeo" placeholder="MT:MT" type="text" maxlength="10">
-            </div>
-            <label for="eventlocationo" class="col-sm-2 control-label">Event Location</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="eventlocationo" placeholder="City Park" type="text" maxlength="10">
-            </div>
-            <label for="userinterestdescriptiono" class="col-sm-2 control-label">Volunteer Interest Description</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="userinterestdescriptiono" placeholder="People who like puppies" type="text" maxlength="10">
-            </div>
-
-
-                <br>
-                <button type="submit" class="btn btn-primary" id="charity-btn-submit">Submit</button>
-            </div>
-        </div>
-    </form>
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Organization</label>
+    <input type="email" id="exampleInputEmail1" class="form-control exampleInputEmail1" aria-describedby="emailHelp1" placeholder="Org Name">
+    <small id="emailHelp1" class="form-text text-muted">Your organization must be a registered 501c3, and must provide proof of status on request.</small>
+    <br>
+    <input type="name" class="form-control exampleInputPassword1" placeholder="Org Website">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputName">Contact Person:</label>
+    <input type="name" id="exampleInputName" class="form-control exampleInputPassword1" placeholder="First Name">
+    <br>
+    <input type="name" class="form-control exampleInputPassword1" placeholder="Last Name">
+    <br>
+    <input type="name" class="form-control exampleInputPassword1" placeholder="Title/Position">
+    <br>
+    <input type="email" class="form-control exampleInputPassword1" placeholder="Email" aria-describedby="emailHelp2">
+    <small id="emailHelp2" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">Event Details:</label>
+    <input type="email" id="exampleInputEmail2" class="form-control exampleInputEmail1" placeholder="Event Name">
+    <br>
+    <input type="email" class="form-control exampleInputPassword1" placeholder="2 sentence description">
+    <br>
+    <input type="email" class="form-control exampleInputPassword1" placeholder="Event Date">
+    <br>
+    <input type="email" class="form-control exampleInputPassword1" placeholder="Event Time">
+    <br>
+    <input type="email" class="form-control exampleInputPassword1" placeholder="Event Location">
+    <br>
+    <input type="email" class="form-control exampleInputPassword1" placeholder="Description of who might be interested in the event">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
 <br>
 <!--Footer-->
 <footer class="page-footer indigo center-on-small-only pt-0">
@@ -228,21 +207,20 @@
 
 
 <!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Plugin JavaScript -->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="../vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
 <!-- Contact Form JavaScript -->
-<script src="js/jqBootstrapValidation.js"></script>
-<script src="js/contact_me.js"></script>
+<script src="../js/jqBootstrapValidation.js"></script>
+<script src="../js/contact_me.js"></script>
 
 <!-- Custom scripts for this template -->
-<script src="js/charity.min.js"></script>
-<script src="js/quickie.js"></script>
-<script src="js/quickiehelp_db_charity.js"></script>
+<script src="../js/charity.min.js"></script>
+<script src="../js/quickie.js"></script>
 
 </body>
 

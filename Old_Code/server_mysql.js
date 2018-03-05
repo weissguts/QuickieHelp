@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 app.use(express.static("app/public"));
 // Routes
 // =============================================================
-require("app/routes/api-routes_user.js")(app);
+require("app/routes/user_controller.js")(app);
 require("app/routes/html-routes.js")(app);
 
 
