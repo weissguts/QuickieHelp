@@ -1,5 +1,5 @@
 // *********************************************************************************
-// api-routes.js - this file offers a set of routes for displaying and saving data to the db
+// api-routes_user.js - this file offers a set of routes for displaying and saving data to the db
 // *********************************************************************************
 // Dependencies
 // =============================================================
@@ -8,24 +8,30 @@ var db = require("../models");
 // =============================================================
 module.exports = function(app) {
     // Get all users
-    app.get("/api/all/", function(req, res) {
-        db.User.findAll({})
+    app.get("/api/charities/", function(req, res) {
+        db.Charity.findAll({})
             .then(function(dbPost) {
                 res.json(dbPost);
             });
+
     });
 
-    //Add a user -* Sequelize Code
-    app.post("/api/new", function(req, res) {
+    //Add a charity -* Sequelize Code
+    app.post("/api/charities", function(req, res) {
         console.log(req.body);
-        db.User.create({
+        db.Charity.create({
+            organization: req.body.organization,
+            orgwebsite: req.body.orgwebsite,
             firstname: req.body.firstname,
             lastname: req.body.lastname,
+            title: req.body.title,
             email: req.body.email,
-            password: req.body.password,
-            age: req.body.age,
-            interest: req.body.interest,
-            categories: req.body.categories,
+            eventname: req.body.eventname,
+            description: req.body.description,
+            eventdate: req.body.eventdate,
+            eventtime: req.body.eventtime,
+            eventlocation: req.body.eventlocation,
+            userinterestdescription: req.body.userinterestdescription,
             created_at: req.body.created_at
         })
             .then(function(dbPost) {
