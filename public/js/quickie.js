@@ -64,6 +64,7 @@ function handleAuthClick(event) {
   gapi.auth2.getAuthInstance().signIn();
 }
 
+
 /**
  *  Sign out the user upon button click.
  */
@@ -143,6 +144,6 @@ $("#add-event5").on("click", function() {
 $("#add-event6").on("click", function() {
   currentEvent = Event6;
   eventFun();
-});
 
+});
 
