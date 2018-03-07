@@ -4,3 +4,10 @@ idea
 .idea
 /.idea
 /idea
+<<<<<<< Updated upstream
+passport_tests
+google_tests
+=======
+google_tests
+passport_tests
+>>>>>>> Stashed changes
