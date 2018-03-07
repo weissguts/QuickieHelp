@@ -1,12 +1,11 @@
 {
-   "development": {
-    "username": "b9r88oj2hf66ji45",
-    "password": "tcuoj5gq2irjwvpg",
-    "database": "p9ba4rxuwzc4pgoz",
-    "host": "y0nkiij6humroewt.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    "dialect": "mysql",
-    "port": "3306"
-  },
+    "development": {
+        "username": "root",
+        "password": "root",
+        "database": "quickiehelp",
+        "host": "127.0.0.1",
+        "dialect": "mysql"
+    },
     "test": {
         "username": "root",
         "password": "root",
