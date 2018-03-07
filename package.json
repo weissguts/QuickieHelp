@@ -1,30 +1,14 @@
 {
-  "title": "Freelancer",
-  "name": "startbootstrap-freelancer",
-  "version": "4.0.0-beta.2",
-  "description": "A freelancer portfolio HTML theme for Bootstrap.",
-  "keywords": [
-    "css",
-    "sass",
-    "html",
-    "responsive",
-    "theme",
-    "template"
-  ],
-  "homepage": "https://startbootstrap.com/template-overviews/freelancer",
-  "bugs": {
-    "url": "https://github.com/BlackrockDigital/startbootstrap-freelancer/issues",
-    "email": "feedback@startbootstrap.com"
+  "name": "express-library",
+  "version": "1.0.0",
+  "description": "Simple library app built with express.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "license": "MIT",
-  "author": "Start Bootstrap",
-  "contributors": [
-    "David Miller (http://davidmiller.io/)"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/BlackrockDigital/startbootstrap-freelancer.git"
-  },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "bootstrap": "^4.0.0-beta.2",
     "express": "^4.16.2",
@@ -49,5 +33,16 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "3.0.0"
+
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.11",
+    "moment": "^2.20.1",
+    "mysql": "^2.12.0",
+    "mysql2": "^1.5.2",
+    "sequelize": "^4.35.2",
+    "sequelize-cli": "^4.0.0"
+
   }
 }
