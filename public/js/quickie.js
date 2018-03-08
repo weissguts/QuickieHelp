@@ -37,11 +37,16 @@ function initClient() {
 
     // Handle the initial sign-in state.
     updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
-    authorizeButton.onclick = handleAuthClick;
-    signoutButton.onclick = handleSignoutClick;
+    // authorizeButton.onclick = handleAuthClick;
+    // signoutButton.onclick = handleSignoutClick;
   });
 }
-
+$(document).on('click', '#loginAccount', function() {
+  email = $("#emailField").val().trim();
+  password = $("#passwordField").val().trim();
+  console.log(email);
+  console.log(password);
+});
 /**
  *  Called when the signed in status changes, to update the UI
  *  appropriately. After a sign-in, the API is called.
@@ -146,4 +151,3 @@ $("#add-event6").on("click", function() {
   eventFun();
 
 });
-

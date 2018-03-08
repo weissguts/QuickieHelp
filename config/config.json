@@ -2,13 +2,9 @@
     "development": {
 
       "port":8889,
-        "username": "root",
+          "username": "root",
         "password": "root",
         "database": "p9ba4rxuwzc4pgoz",
-
-        "username": "root",
-        "password": "root",
-        "database": "quickiehelp",
         "host": "127.0.0.1",
         "dialect": "mysql"
     },
@@ -29,6 +25,3 @@
   }
 
 }
-
-}
-
