@@ -1,6 +1,8 @@
+var db = require("../models");
+
 module.exports = (app, passport) => {
   app.get('/', (req, res) => {
-    res.render('index.js');
+    res.render('index');
   });
 
   app.get('/signup', (req, res) => {

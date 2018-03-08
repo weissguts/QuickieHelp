@@ -41,11 +41,27 @@ function initClient() {
     // signoutButton.onclick = handleSignoutClick;
   });
 }
-$(document).on('click', '#loginAccount', function() {
-  email = $("#emailField").val().trim();
-  password = $("#passwordField").val().trim();
-  console.log(email);
-  console.log(password);
+$(document).on('click', '#loginAccount', function(event) {
+  event.preventDefault();
+  var newUser = {
+    email: $("#emailField").val().trim(),
+    password: $("#passwordField").val().trim()
+  };
+  $.get("/api/users", function(data) {})
+    .then(function(data) {
+      console.log(newUser)
+      console.log(data);
+      for (let i = 0; i < data.length; i++) {
+        console.log(data[i])
+        if (newUser.email === data[i].email) {
+          console.log("woo")
+        } else {
+          console.log("boo");
+        }
+      }
+    });
+  $("#emailField").val("");
+  $("#passwordField").val("")
 });
 /**
  *  Called when the signed in status changes, to update the UI
