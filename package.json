@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-
     "bcrypt-nodejs": "0.0.3",
     "bootstrap": "^4.0.0-beta.2",
     "connect-ensure-login": "^0.1.1",

@@ -26,9 +26,9 @@ module.exports = {
       interest: {
         type: Sequelize.STRING
       },
-      categories: {
-        type: Sequelize.STRING
-      },
+      // categories: {
+      //   type: Sequelize.STRING
+      // },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

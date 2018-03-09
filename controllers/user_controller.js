@@ -45,7 +45,7 @@ module.exports = function(app) {
         password: req.body.password,
         age: req.body.age,
         interest: req.body.interest,
-        categories: req.body.categories,
+        // categories: req.body.categories,
         created_at: req.body.created_at
       })
       .then(function(dbPost) {
