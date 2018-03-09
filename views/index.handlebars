@@ -1,119 +1,44 @@
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
-    <div class="container-fluid">
-        <a class="navbar-brand js-scroll-trigger"><img src="img/logo.png" alt="logo" class="logo"></a>
-        <button class="navbar-toggler navbar-toggler-right bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item mx-0 mx-lg-1">
-                    {{#if isLoggedIn}}
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/logout" id="loginNav">log out</a>
-                    {{else}}
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/signin" id="loginNav">log in</a>
-                    {{/if}}
-                </li>
-                <li class="nav-item mx-0 mx-lg-1">
+<!--&lt;!&ndash; Navigation &ndash;&gt;-->
+<!--<nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">-->
+    <!--<div class="container-fluid">-->
+        <!--<a class="navbar-brand js-scroll-trigger"><img src="img/logo.png" alt="logo" class="logo"></a>-->
+        <!--<button class="navbar-toggler navbar-toggler-right bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">-->
+            <!--Menu-->
+            <!--<i class="fa fa-bars"></i>-->
+        <!--</button>-->
+        <!--<div class="collapse navbar-collapse" id="navbarResponsive">-->
+            <!--<ul class="navbar-nav ml-auto">-->
+                <!--<li class="nav-item mx-0 mx-lg-1">-->
+                    <!--{{#if isLoggedIn}}-->
+                        <!--<a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/logout" id="loginNav">log out</a>-->
+                    <!--{{else}}-->
+                        <!--<a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/signin" id="loginNav">log in</a>-->
+                    <!--{{/if}}-->
+                <!--</li>-->
+                <!--<li class="nav-item mx-0 mx-lg-1">-->
 
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/signup" id="signupNav">sign up</a>
+                    <!--<a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/signup" id="signupNav">sign up</a>-->
 
+                <!--</li>-->
+                <!--<li class="nav-item mx-0 mx-lg-1">-->
+                    <!--<div class="btn-group">-->
+                        <!--<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="charityDropdown" href="#">-->
+                            <!--charities-->
+                            <!--<span class="caret"></span>-->
+                        <!--</a>-->
+                        <!--<ul class="dropdown-menu">-->
+                            <!--<li class="dropdown-item"><a href="/charity_eventpage">Create Event</a>-->
+                            <!--</li>-->
+                            <!--<li class="dropdown-item"><a href="/aboutus">Learn More</a>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</nav>-->
 
-                </li>
-                <li class="nav-item mx-0 mx-lg-1">
-                    <div class="btn-group">
-                        <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="charityDropdown" href="#">
-                            charities
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-item"><a href="/charity_eventpage">Create Event</a>
-                            </li>
-                            <li class="dropdown-item"><a href="/aboutus">Learn More</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<!--&lt;!&ndash; login modal &ndash;&gt;-->
-<!--<div class="modal fade" id="popUpWindow">-->
-<!--<div class="modal-dialog">-->
-<!--<div class="modal-content">-->
-<!--<br>-->
-<!--<div align="center">-->
-<!--<img class="img-circle" id="img_logo" src="img/spiral.png">-->
-<!--</div>-->
-<!--<div class="modal-header text-center">-->
-<!--<h3 class="modal-title">log in</h3>-->
-<!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
-<!--</div>-->
-<!--<div class="modal-body text-center">-->
-<!--<form role="form">-->
-<!--<input type="email" class="form-control" placeholder="email" required>-->
-<!--<br>-->
-<!--<input type="password" class="form-control" placeholder="password" required>-->
-<!--</form>-->
-<!--<br>-->
-<!--<div class="checkbox text-left">-->
-<!--<label>-->
-<!--<input type="checkbox"> remember me-->
-<!--</label>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="modal-footer">-->
-<!--<button class="btn btn-primary">log in</button>-->
-<!--</div>-->
-<!--<div>-->
-<!--<button id="login_lost_btn" type="button" class="btn btn-link">lost password?</button>-->
-<!--<button id="login_register_btn" type="button" class="btn btn-link" href="signup_page_heroku.html">sign-up</button>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-
-<!-- login modal -->
-<!-- <div class="modal" id="popUpWindow">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <br>
-            <div align="center">
-                <img class="img-circle" id="img_logo" src="img/spiral.png">
-            </div>
-            <div class="modal-header text-center">
-                <div id="loginDiv" class="main-class">
-
-                    <h3>quickiehelp Login</h3>
-                    <input type="email" placeholder="Email Goes Here" id="emailField">
-                    <input type="password" placeholder="**********" id="passwordField">
-                    <button id="loginAccount">Login to Account</button>
-                    <button id="createAccount">
-                        Create an Account
-                    </button>
-                </div>
-
-                <div id="userDiv" class="loggedin-div">
-
-                    <p id="userPara"> You've Made It to The Login Page! </p>
-                    <button id="logOut">
-                        Logout
-                    </button>
-                    <button id="verification">Send Verification
-                    </button>
-                </div>
-
-            </div>
-            <div>
-                <button id="login_lost_btn" type="button" class="btn btn-link">lost password?</button>
-                <button id="login_register_btn" type="button" class="btn btn-link" href="signup_page_heroku.html">sign-up</button>
-            </div>
-        </div>
-    </div>
-</div> -->
 
 
 <!-- Header -->

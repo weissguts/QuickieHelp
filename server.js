@@ -59,7 +59,7 @@ app.set("view engine", "handlebars");
 
 require("./controllers/user_controller.js")(app);
 require("./controllers/charity_controller.js")(app);
-require("./controllers/index.js")(app);
+// require("./controllers/index.js")(app);
 require("./controllers/aboutus.js")(app);
 
 
