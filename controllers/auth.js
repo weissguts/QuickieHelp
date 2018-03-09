@@ -9,20 +9,20 @@ module.exports = (app, passport) => {
     res.render('signup');
   });
 
-  app.get('/signin', (req, res) => {
-    res.render('signin');
-  });
+  // app.get('/signin', (req, res) => {
+  //   res.render('user');
+  // });
 
   app.post(
     '/signup',
     passport.authenticate('local-signup', {
-      successRedirect: '/home',
-      failureRedirect: '/signup'
+      successRedirect: '/user',
+      failureRedirect: '/index'
     })
   );
 
-  app.get('/home', isLoggedIn, (req, res) => {
-    res.render('home');
+  app.get('/index', isLoggedIn, (req, res) => {
+    res.render('index');
   });
 
   app.get('/logout', (req, res) => {
@@ -34,14 +34,14 @@ module.exports = (app, passport) => {
   app.post(
     '/signin',
     passport.authenticate('local-signin', {
-      successRedirect: '/home',
-      failureRedirect: '/signin'
+      successRedirect: '/index',
+      failureRedirect: '/index'
     })
   );
 
   function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) return next();
 
-    res.redirect('/signin');
+    res.redirect('/index');
   }
 }

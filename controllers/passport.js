@@ -78,9 +78,9 @@ module.exports = (passport, user) => {
       function(req, email, password, done) {
         var User = user;
 
-        // var isValidPassword = (userpass, password) => {
-        //   return bCrypt.compareSync(password, userpass);
-        // };
+        var isValidPassword = (userpass, password) => {
+          return bCrypt.compareSync(password, userpass);
+        };
 
         User.findOne({
             where: {
@@ -94,7 +94,7 @@ module.exports = (passport, user) => {
               });
             }
 
-            if (!password(user.password, password)) {
+            if (!isValidPassword(user.password, password)) {
               return done(null, false, {
                 message: 'Incorrect password.'
               });

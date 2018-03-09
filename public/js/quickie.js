@@ -43,25 +43,35 @@ function initClient() {
 }
 $(document).on('click', '#loginAccount', function(event) {
   event.preventDefault();
+  console.log("working")
   var newUser = {
     email: $("#emailField").val().trim(),
     password: $("#passwordField").val().trim()
   };
-  $.get("/api/users", function(data) {})
-    .then(function(data) {
-      console.log(newUser)
-      console.log(data);
-      for (let i = 0; i < data.length; i++) {
-        console.log(data[i])
-        if (newUser.email === data[i].email) {
-          console.log("woo")
-        } else {
-          console.log("boo");
-        }
-      }
-    });
-  $("#emailField").val("");
-  $("#passwordField").val("")
+  $.ajax({
+    method: "POST",
+    url: "/signin",
+    data: newUser
+  }).done(function(data) {
+    console.log("working2")
+  });
+  // $.post("/signin", function(newUser) {
+  //     console.log(newUser);
+  //   })
+  //   .then(function(data) {
+  //     console.log(newUser)
+  //     console.log(data);
+  //     for (let i = 0; i < data.length; i++) {
+  //       if (newUser.email === data[i].email && newUser.password === data[i].password) {
+  //         console.log("woo")
+  //         return;
+  //       } else {
+  //         console.log("boo");
+  //       }
+  //     }
+  //   });
+  // $("#emailField").val("");
+  // $("#passwordField").val("")
 });
 /**
  *  Called when the signed in status changes, to update the UI

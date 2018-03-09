@@ -18,6 +18,7 @@ const env = require('dotenv').load();
 var PORT = process.env.PORT || 3000;
 // Requiring our models for syncing
 var db = require("./models");
+require('./controllers/passport.js')(passport, db.user);
 // Sets up the Express app to handle data parsing
 // parse application/x-www-form-urlencoded
 
@@ -69,7 +70,7 @@ require("./controllers/aboutus.js")(app);
 const authRoute = require('./controllers/auth.js')(app, passport);
 
 // Load passport strategies
-require('./public/js/passport.js')(passport, db.user);
+
 
 db.sequelize.sync({
   force: false
