@@ -9,7 +9,7 @@ var db = require("../models/index");
 module.exports = function(app) {
     // Get all charities
     app.get("/api/charities", function(req, res) {
-        db.Charity.findAll({})
+        db.charity.findAll({})
             .then(function(dbPost) {
                 res.json(dbPost);
             });
@@ -26,7 +26,7 @@ module.exports = function(app) {
     //Add a charity -* Sequelize Code
     app.post("/api/charities", function(req, res) {
         console.log(req.body);
-        db.Charity.create({
+        db.charity.create({
             organization: req.body.organization,
             orgwebsite: req.body.orgwebsite,
             firstname: req.body.firstname,
