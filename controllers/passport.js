@@ -47,7 +47,9 @@ module.exports = (passport, user) => {
               email: email,
               password: userPassword,
               firstname: req.body.firstname,
-              lastname: req.body.lastname
+              lastname: req.body.lastname,
+              age: req.body.age,
+              interest: req.body.interests
             };
 
             User.create(data).then((newUser, created) => {
