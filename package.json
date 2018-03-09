@@ -27,6 +27,7 @@
     "jquery.easing": "^1.4.1",
     "magnific-popup": "^1.1.0",
     "morgan": "^1.9.0",
+    "nodemon": "^1.17.1",
     "npm": "^5.7.1",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
