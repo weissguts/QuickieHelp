@@ -17,11 +17,11 @@ module.exports = (app, passport) => {
     });
 
     app.get('/signup', (req, res) => {
-        res.render('signup');
+        res.render('signup', {isLoggedIn:req.isAuthenticated()} );
     });
 
     app.get('/signin', (req, res) => {
-        res.render('signin');
+        res.render('signin', {isLoggedIn:req.isAuthenticated()} );
     });
 
     app.post(
@@ -61,4 +61,4 @@ module.exports = (app, passport) => {
     //
     //     // res.redirect('/index');
     // }
-}
+};

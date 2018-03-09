@@ -9,7 +9,7 @@ var db = require("../models/index");
 module.exports = function(app) {
     // Renders Page
     app.get("/aboutus", function(req, res) {
-        res.render("aboutus");
+        res.render("aboutus", {isLoggedIn:req.isAuthenticated()});
     });
 
 };

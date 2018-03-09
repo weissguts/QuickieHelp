@@ -2,7 +2,7 @@
 $("select").imagepicker()
 
 let currentEvent;
-var CLIENT_ID = "601954114317-c10280jjsdfouibgm5uerhdo59laoqi6.apps.googleusercontent.com";
+var CLIENT_ID = "601954114317-641996pklfgvdth0jtpj45bm8jshp2sp.apps.googleusercontent.com";
 var API_KEY = "AIzaSyBZJcuSuQ60EoER2xhWtbKj_8_-zwZkgWA";
 
 // Array of API discovery doc URLs for APIs used by the quickstart

@@ -19,7 +19,7 @@ module.exports = function(app) {
 
         // Renders Page
         app.get("/charity_eventpage", function(req, res) {
-            res.render("charity_eventpage");
+            res.render("charity_eventpage",{isLoggedIn:req.isAuthenticated()});
         });
 
 
