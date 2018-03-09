@@ -7,11 +7,36 @@ footer {
     color: white
 }
 
+#heartContainer {
+    position: relative;
+    cursor: pointer;
+}
+
+.clicks {
+    z-index: 100;
+    position: relative;
+    bottom: 25.5px;
+}
+.heart {
+    background: url("img/charity_top/redlike.PNG") no-repeat;
+    z-index: 10;
+}
+
+
 a {
     color: #FF6B6B;
 }
 .modal{
     text-align: left
+}
+.profileSmall {
+    height: 4%;
+    width: 7%;
+    display: inline-block;
+    border-radius: 3px;
+}
+.largeProfile {
+    border-radius: 50%;
 }
 
 .container{

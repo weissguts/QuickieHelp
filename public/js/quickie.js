@@ -147,3 +147,44 @@ $("#add-event6").on("click", function() {
 
 });
 
+// heart animate when clicked
+$(document).ready(function() {
+
+    var counter = 0;
+
+    function heartClick() {
+      counter++;
+      $('.clicks').html(counter);
+    }
+
+    $('#heartContainer').click(function(){ 
+      console.log("alert");
+      heartClick();
+      $('#heartContainer').toggleClass("animated pulse");
+    }); 
+  }); 
+
+// post to route to database
+
+// Likes function
+
+var mysql = require("mysql");
+// create the connection information for the sql database
+var connection = mysql.createConnection({
+  host: "localhost",
+  port: 3306,
+  // Your username
+  user: "root",
+  // Your password
+  password: "root",
+  database: "quickiehelp"
+});
+// connect to the mysql server and sql database
+connection.connect(function(err) {
+  if (err) throw err;
+  // run the start function after the connection is made to prompt the user
+  start();
+});
+// function for counting clicks//
+
+
