@@ -177,3 +177,20 @@ $("#add-event6").on("click", function() {
   eventFun();
 
 });
+
+$("#add-event7").on("click", function() {
+    currentEvent = Event7;
+    eventFun();
+
+});
+
+
+$(document).ready(function () {
+    // Send an AJAX POST-request with jQuery
+    $.get("/api/charities", function (data, status) {
+        console.log(data);
+
+
+    })
+
+});

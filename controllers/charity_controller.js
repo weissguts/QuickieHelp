@@ -23,9 +23,6 @@ module.exports = function(app) {
         });
 
 
-
-
-
     //Add a charity -* Sequelize Code
     app.post("/api/charities", function(req, res) {
         console.log(req.body);

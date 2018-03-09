@@ -1,6 +1,7 @@
 /* global moment */
 // When the page loads, grab and display all of our charities
 
+
 // When user chirps (clicks addBtn)
 $("#charity-btn-submit").on("click", function(event) {
     event.preventDefault();
@@ -36,3 +37,5 @@ $("#charity-btn-submit").on("click", function(event) {
     // $("#age").val("");
     // $("#interests").val("");
 });
+
+

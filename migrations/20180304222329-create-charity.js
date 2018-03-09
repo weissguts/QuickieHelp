@@ -33,10 +33,10 @@ module.exports = {
         type: Sequelize.STRING
       },
       eventdate: {
-        type: Sequelize.STRING
+        type: Sequelize.DATE
       },
       eventtime: {
-        type: Sequelize.STRING
+        type: Sequelize.TIME
       },
       eventlocation: {
         type: Sequelize.STRING
@@ -46,11 +46,11 @@ module.exports = {
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATETIME
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATETIME
       }
     });
   },

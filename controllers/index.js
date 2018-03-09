@@ -9,7 +9,17 @@ var db = require("../models/index");
 module.exports = function(app) {
     // Get all users
     app.get("/", function(req, res) {
-        res.render("index");
+
+        var charityCard = [];
+        db.Charity.findAll({})
+            .then(function(dbPost) {
+                charityCard = dbPost;
+                res.render("index", {charityCardShow: charityCard} );
+            });
+
     });
 
 };
+
+
+

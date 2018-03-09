@@ -191,6 +191,44 @@
                     <img class="img-fluid" src="img/charity_top/teach.PNG" alt="">
                 </a>
             </div>
+
+            {{!--
+If startment runs if variable exists
+or isn't assigned to an eempty value
+--}}
+            {{#if charityCardShow}}
+
+                    {{!--
+                    In code below "each" interates over the "charityCardShow" property and
+                    "this" refers to the property inside the array of objects
+                    --}}
+                    {{#each charityCardShow}}
+                        {{this.id}}
+                        {{this.organization}}
+                        {{this.orgwebsite}}
+                        {{this.firstname}}
+                        {{this.lastname}}
+                        {{this.title}}
+                        {{this.email}}
+                        {{this.eventname}}
+                        {{this.description}}
+                        {{this.eventdate}}
+                        {{this.eventtime}}
+                        {{this.eventlocation}}
+                        {{this.userinterestdescription}}
+                        {{this.createdAt}}
+                        {{this.updatedAt}}
+                        <br><br>
+                    {{/each}}
+
+            {{!--
+            Else startment runs if DOESN'T variable exist
+            or IS assigned to an eempty value
+            --}}
+            {{else}}
+                <p><em>There are currently no charity events.</em></p>
+            {{/if}}
+
         </div>
     </div>
 
@@ -604,3 +642,98 @@
         </div>
     </div>
 </div>
+
+<!-- Charity Modal 7 -->
+<div class="charity-modal mfp-hide" id="charity-modal-7">
+    <div class="charity-modal-dialog bg-white">
+        <a class="close-button d-md-block charity-modal-dismiss" href="#">
+            <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-secondary mb-0">Event Details:</h2>
+
+                    <img class="img-fluid mb-5" src="img/charity_top/teach.PNG" alt="">
+                    <p class="mb-5">The Coalition is a national leader in providing integrated housing, health care, vocational
+                        and supportive services, creating lasting solutions to homelessness. Connect with us and learn how we create lasting solutions to homelessness.</p>
+                    <div id="mapSix">
+                    </div>
+                    <br>
+                    <a href="#signin"><img src="img/google_signin.png" class="authorize-button"></a>
+                    <a href="#signin"><img src="img/google_cal.png" id="add-event7"></a>
+                    <pre class="content"></pre>
+                    <script>
+                        let Event7 = {
+                            'summary': 'Teach Art',
+                            'location': 'Coalition for the Homeless',
+                            'description': "Art is the foundation of education. Help area youth discover art and their creative side. Multiple times available--information session on the 1st of Feb.",
+                            'start': {
+                                'dateTime': '2018-02-01T18:00:00-08:00',
+                                'timeZone': 'America/Denver',
+                            },
+                            'end': {
+                                'dateTime': '2018-02-01T20:00:00-08:00',
+                                'timeZone': 'America/Denver',
+                            },
+                        };
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
