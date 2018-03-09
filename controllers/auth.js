@@ -5,7 +5,7 @@ module.exports = (app, passport) => {
     app.get('/', (req, res) => {
 
         var charityCard = [];
-        db.Charity.findAll({})
+        db.charity.findAll({})
             .then(function(dbPost) {
 
                 charityCard = dbPost;
