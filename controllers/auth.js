@@ -9,20 +9,22 @@ module.exports = (app, passport) => {
     res.render('signup');
   });
 
-  // app.get('/signin', (req, res) => {
-  //   res.render('user');
-  // });
+  app.get('/signin', (req, res) => {
+    res.render('signin');
+  });
 
   app.post(
     '/signup',
     passport.authenticate('local-signup', {
-      successRedirect: '/user',
-      failureRedirect: '/index'
+      successRedirect: '/index',
+      failureRedirect: '/signup'
     })
   );
 
   app.get('/index', isLoggedIn, (req, res) => {
-    res.render('index');
+    res.render('index', {
+      isLoggedIn: true
+    });
   });
 
   app.get('/logout', (req, res) => {
