@@ -1,4 +1,6 @@
 //new
+$("select").imagepicker()
+
 let currentEvent;
 var CLIENT_ID = "601954114317-c10280jjsdfouibgm5uerhdo59laoqi6.apps.googleusercontent.com";
 var API_KEY = "AIzaSyBZJcuSuQ60EoER2xhWtbKj_8_-zwZkgWA";
