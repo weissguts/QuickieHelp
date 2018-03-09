@@ -149,7 +149,7 @@ $("body").on("click", "#signout-button", function() {
     gapi.auth2.getAuthInstance().signOut();
 });
 
-$("#add-event").on("click", function() {
+$(".add-event").on("click", function() {
     currentEvent = Event;
     eventFun();
 });
