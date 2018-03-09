@@ -433,5 +433,10 @@ a:hover {
     border-color: #1a252f
 }
 
+.image_picker_image {
+    width: 125px;
+    height: 83.98px;
+}
+
 
 

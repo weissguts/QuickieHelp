@@ -202,7 +202,57 @@ or isn't assigned to an eempty value
                     In code below "each" interates over the "charityCardShow" property and
                     "this" refers to the property inside the array of objects
                     --}}
+
                     {{#each charityCardShow}}
+                        <div class="col-md-6 col-lg-4">
+                            <a class="charity-item d-block mx-auto" href="#charity-modal-6" id="mapTeach">
+                                <div class="charity-item-caption d-flex position-absolute h-100 w-100">
+                                    <div class="charity-item-caption-content my-auto w-100 text-center text-white">
+                                        <i class="fa fa-search-plus fa-3x"></i>
+                                    </div>
+                                </div>
+                                <img class="img-fluid" src="{{this.imageSelect}}" alt="">
+                            </a>
+                            <!-- Charity Modal 6 -->
+                            <div class="charity-modal mfp-hide" id="charity-modal-6">
+                                <div class="charity-modal-dialog bg-white">
+                                    <a class="close-button d-md-block charity-modal-dismiss" href="#">
+                                        <i class="fa fa-3x fa-times"></i>
+                                    </a>
+                                    <div class="container text-center">
+                                        <div class="row">
+                                            <div class="col-lg-8 mx-auto">
+                                                <h2 class="text-secondary mb-0">Event Details:</h2>
+
+                                                <img class="img-fluid mb-5" src="{{this.imageSelect}}" alt="">
+                                                <p class="mb-5">
+                                                    {{this.id}}
+                                                    {{this.organization}}
+                                                    {{this.orgwebsite}}
+                                                    {{this.firstname}}
+                                                    {{this.lastname}}
+                                                    {{this.title}}
+                                                    {{this.email}}
+                                                    {{this.eventname}}
+                                                    {{this.description}}
+                                                    {{this.eventdate}}
+                                                    {{this.eventtime}}
+                                                    {{this.eventlocation}}
+                                                    {{this.userinterestdescription}}
+                                                    {{this.createdAt}}
+                                                    {{this.updatedAt}}
+                                                </p>
+
+                                                <br>
+                                                <a href="#signin"><img src="img/google_signin.png" class="authorize-button"></a>
+                                                <a href="#signin"><img src="img/google_cal.png" class="add-event"></a>
+                                                <pre class="content"></pre>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         {{this.id}}
                         {{this.organization}}
                         {{this.orgwebsite}}
@@ -219,6 +269,7 @@ or isn't assigned to an eempty value
                         {{this.createdAt}}
                         {{this.updatedAt}}
                         <br><br>
+                        </div>
                     {{/each}}
 
             {{!--

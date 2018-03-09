@@ -17,6 +17,7 @@ $("#charity-btn-submit").on("click", function(event) {
         email: $("#emailo").val().trim(),
         eventname: $("#eventnameo").val().trim(),
         description: $("#descriptiono").val().trim(),
+        imageSelect: $("#imageSelecto").val().trim(),
         eventdate: $("#eventdateo").val().trim(),
         eventtime: $("#eventtimeo").val().trim(),
         eventlocation: $("#eventlocationo").val().trim(),

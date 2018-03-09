@@ -35,6 +35,7 @@ module.exports = function(app) {
             email: req.body.email,
             eventname: req.body.eventname,
             description: req.body.description,
+            imageSelect: req.body.imageSelect,
             eventdate: req.body.eventdate,
             eventtime: req.body.eventtime,
             eventlocation: req.body.eventlocation,

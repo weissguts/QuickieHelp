@@ -18,7 +18,7 @@ var addEventButton = document.getElementById('add-event');
  *  On load, called to load the auth2 library and API client library.
  */
 function handleClientLoad() {
-  gapi.load('client:auth2', initClient);
+    gapi.load('client:auth2', initClient);
 }
 
 /**
@@ -26,73 +26,73 @@ function handleClientLoad() {
  *  listeners.
  */
 function initClient() {
-  gapi.client.init({
-    apiKey: API_KEY,
-    clientId: CLIENT_ID,
-    discoveryDocs: DISCOVERY_DOCS,
-    scope: SCOPES
-  }).then(function() {
-    // Listen for sign-in state changes.
-    gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+    gapi.client.init({
+        apiKey: API_KEY,
+        clientId: CLIENT_ID,
+        discoveryDocs: DISCOVERY_DOCS,
+        scope: SCOPES
+    }).then(function() {
+        // Listen for sign-in state changes.
+        gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
 
-    // Handle the initial sign-in state.
-    updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
-    // authorizeButton.onclick = handleAuthClick;
-    // signoutButton.onclick = handleSignoutClick;
-  });
+        // Handle the initial sign-in state.
+        updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+        // authorizeButton.onclick = handleAuthClick;
+        // signoutButton.onclick = handleSignoutClick;
+    });
 }
 $(document).on('click', '#loginAccount', function(event) {
-  event.preventDefault();
-  console.log("working")
-  var newUser = {
-    email: $("#emailField").val().trim(),
-    password: $("#passwordField").val().trim()
-  };
-  $.ajax({
-    method: "POST",
-    url: "/signin",
-    data: newUser
-  }).done(function(data) {
-    console.log("working2")
-  });
-  // $.post("/signin", function(newUser) {
-  //     console.log(newUser);
-  //   })
-  //   .then(function(data) {
-  //     console.log(newUser)
-  //     console.log(data);
-  //     for (let i = 0; i < data.length; i++) {
-  //       if (newUser.email === data[i].email && newUser.password === data[i].password) {
-  //         console.log("woo")
-  //         return;
-  //       } else {
-  //         console.log("boo");
-  //       }
-  //     }
-  //   });
-  // $("#emailField").val("");
-  // $("#passwordField").val("")
+    event.preventDefault();
+    console.log("working")
+    var newUser = {
+        email: $("#emailField").val().trim(),
+        password: $("#passwordField").val().trim()
+    };
+    $.ajax({
+        method: "POST",
+        url: "/signin",
+        data: newUser
+    }).done(function(data) {
+        console.log("working2")
+    });
+    // $.post("/signin", function(newUser) {
+    //     console.log(newUser);
+    //   })
+    //   .then(function(data) {
+    //     console.log(newUser)
+    //     console.log(data);
+    //     for (let i = 0; i < data.length; i++) {
+    //       if (newUser.email === data[i].email && newUser.password === data[i].password) {
+    //         console.log("woo")
+    //         return;
+    //       } else {
+    //         console.log("boo");
+    //       }
+    //     }
+    //   });
+    // $("#emailField").val("");
+    // $("#passwordField").val("")
 });
 /**
  *  Called when the signed in status changes, to update the UI
  *  appropriately. After a sign-in, the API is called.
  */
 function updateSigninStatus(isSignedIn) {
-  if (isSignedIn) {
-    $(".authorizeButton").addClass("btn btn-primary btn-lg rounded-pill");
-    $("signoutButton").addClass("btn btn-primary btn-lg rounded-pill");
-    $("addEventButton").addClass("btn btn-primary btn-lg rounded-pill");
-  } else {
-    $(".authorizeButton").addClass("btn btn-primary btn-lg rounded-pill");
-    $("signoutButton").addClass("btn btn-primary btn-lg rounded-pill");
-  }
+    if (isSignedIn) {
+        $(".authorizeButton").addClass("btn btn-primary btn-lg rounded-pill");
+        $("signoutButton").addClass("btn btn-primary btn-lg rounded-pill");
+        $("addEventButton").addClass("btn btn-primary btn-lg rounded-pill");
+    } else {
+        $(".authorizeButton").addClass("btn btn-primary btn-lg rounded-pill");
+        $("signoutButton").addClass("btn btn-primary btn-lg rounded-pill");
+    }
 }
 
 /**
  *  Sign in the user upon button click.
  */
 function handleAuthClick(event) {
-  gapi.auth2.getAuthInstance().signIn();
+    gapi.auth2.getAuthInstance().signIn();
 }
 
 
@@ -100,7 +100,7 @@ function handleAuthClick(event) {
  *  Sign out the user upon button click.
  */
 function handleSignoutClick(event) {
-  gapi.auth2.getAuthInstance().signOut();
+    gapi.auth2.getAuthInstance().signOut();
 }
 
 /**
@@ -110,9 +110,9 @@ function handleSignoutClick(event) {
  * @param {string} message Text to be placed in pre element.
  */
 function appendPre(message) {
-  var pre = document.getElementsByClassName('content');
-  var textContent = document.createTextNode(message + '\n');
-  pre.appendChild(textContent);
+    var pre = document.getElementsByClassName('content');
+    var textContent = document.createTextNode(message + '\n');
+    pre.appendChild(textContent);
 }
 
 /**
@@ -128,53 +128,53 @@ function appendPre(message) {
 //addEvent.onclick = eventFun;
 function eventFun() {
 
-  var request = gapi.client.calendar.events.insert({
-    'calendarId': 'primary',
-    'resource': currentEvent
-  });
+    var request = gapi.client.calendar.events.insert({
+        'calendarId': 'primary',
+        'resource': currentEvent
+    });
 
-  request.execute(function(event) {
-    appendPre('Event created: ' + event.summary);
-  });
+    request.execute(function(event) {
+        appendPre('Event created: ' + event.summary);
+    });
 };
 
 $("body").on("click", ".authorize-button", function() {
-  gapi.auth2.getAuthInstance().signIn();
-  initClient();
+    gapi.auth2.getAuthInstance().signIn();
+    initClient();
 });
 
 $("body").on("click", "#signout-button", function() {
-  gapi.auth2.getAuthInstance().signOut();
+    gapi.auth2.getAuthInstance().signOut();
 });
 
 $("#add-event").on("click", function() {
-  currentEvent = Event;
-  eventFun();
+    currentEvent = Event;
+    eventFun();
 });
 
 $("#add-event2").on("click", function() {
-  currentEvent = Event2;
-  eventFun();
+    currentEvent = Event2;
+    eventFun();
 });
 
 $("#add-event3").on("click", function() {
-  currentEvent = Event3;
-  eventFun();
+    currentEvent = Event3;
+    eventFun();
 });
 
 $("#add-event4").on("click", function() {
-  currentEvent = Event4;
-  eventFun();
+    currentEvent = Event4;
+    eventFun();
 });
 
 $("#add-event5").on("click", function() {
-  currentEvent = Event5;
-  eventFun();
+    currentEvent = Event5;
+    eventFun();
 });
 
 $("#add-event6").on("click", function() {
-  currentEvent = Event6;
-  eventFun();
+    currentEvent = Event6;
+    eventFun();
 
 });
 
