@@ -37,11 +37,42 @@ function initClient() {
 
     // Handle the initial sign-in state.
     updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
-    authorizeButton.onclick = handleAuthClick;
-    signoutButton.onclick = handleSignoutClick;
+    // authorizeButton.onclick = handleAuthClick;
+    // signoutButton.onclick = handleSignoutClick;
   });
 }
-
+$(document).on('click', '#loginAccount', function(event) {
+  event.preventDefault();
+  console.log("working")
+  var newUser = {
+    email: $("#emailField").val().trim(),
+    password: $("#passwordField").val().trim()
+  };
+  $.ajax({
+    method: "POST",
+    url: "/signin",
+    data: newUser
+  }).done(function(data) {
+    console.log("working2")
+  });
+  // $.post("/signin", function(newUser) {
+  //     console.log(newUser);
+  //   })
+  //   .then(function(data) {
+  //     console.log(newUser)
+  //     console.log(data);
+  //     for (let i = 0; i < data.length; i++) {
+  //       if (newUser.email === data[i].email && newUser.password === data[i].password) {
+  //         console.log("woo")
+  //         return;
+  //       } else {
+  //         console.log("boo");
+  //       }
+  //     }
+  //   });
+  // $("#emailField").val("");
+  // $("#passwordField").val("")
+});
 /**
  *  Called when the signed in status changes, to update the UI
  *  appropriately. After a sign-in, the API is called.
@@ -146,4 +177,3 @@ $("#add-event6").on("click", function() {
   eventFun();
 
 });
-
