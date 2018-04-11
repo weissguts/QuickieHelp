@@ -1,7 +1,7 @@
 
 # QuickieHelp
 
-- *Group project for University of Denver coding bootcamp.
+- Group project for University of Denver coding bootcamp.
 - Collaborators: Daniel Hernandez, Becky Armstrong, Ben Petrila, Marcus Ornelas.
 ## Getting Started
 * QuickieHelp is a community platform for charities and people to connect. Charities will be able to post when they need volunteers or help in some kind of physical capacity. Users will then be able to see a list of available opportunities to connect with other members of the community and the charity itself.
