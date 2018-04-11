@@ -18,7 +18,7 @@ https://still-retreat-50906.herokuapp.com/
 
 ## Authors
 
-* **Daniel Hernandez** - *Initial work/BoilerPlate*, *Backend(models/controllers/handlebars/views)*, *FrontEnd(responsive web design/jquery plugins)* *
-* **Ben Petrilla Hernandez** - *Login/Passport.JS*, *Testing w/Nightmare*
+* **Daniel Hernandez** - *Initial work/BoilerPlate*; *Backend(models/controllers/handlebars/views)*; *FrontEnd(responsive web design/jquery plugins)* *
+* **Ben Petrilla Hernandez** - *Login/Passport.JS*; *Testing w/Nightmare*; *Initial drafts with Google Calendar*
 * **Becky Armstrong** - *Overall design & CSS*, *Custom logos & Color scheme*
 * **Marcus Ornelas** - *Testing & getting initial drafts to work with Firebase before switch to MySQL*
