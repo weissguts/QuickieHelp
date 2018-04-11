@@ -22,13 +22,16 @@ $("#charity-btn-submit").on("click", function(event) {
         eventtime: $("#eventtimeo").val().trim(),
         eventlocation: $("#eventlocationo").val().trim(),
         userinterestdescription: $("#userinterestdescriptiono").val().trim()
-
     };
     console.log(newCharity);
 
     // Send an AJAX POST-request with jQuery
-    $.post("/api/charities", newCharity)
-
+    $.post("/api/charities", newCharity);
+    var home = function() {
+        window.location.href = ('/');
+        $.get("/");
+    };
+    home();
 
     // Empty each input box by replacing the value with an empty string
     // $("#firstName").val("");

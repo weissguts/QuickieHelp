@@ -192,7 +192,6 @@ $(document).ready(function () {
     $.get("/api/charities", function (data, status) {
         console.log(data);
 
-
     })
 
 });

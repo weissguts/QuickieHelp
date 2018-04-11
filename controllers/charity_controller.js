@@ -15,9 +15,8 @@ module.exports = function(app) {
             });
     });
 
-    //Renders Page
 
-        // Renders Page
+        // Renders Charity Event Page
         app.get("/charity_eventpage", function(req, res) {
             res.render("charity_eventpage",{isLoggedIn:req.isAuthenticated()});
         });
@@ -45,5 +44,7 @@ module.exports = function(app) {
             .then(function(dbPost) {
                 res.json(dbPost);
             });
+
+
     });
 };

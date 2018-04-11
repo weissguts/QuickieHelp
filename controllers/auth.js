@@ -3,7 +3,6 @@ var db = require("../models/index");
 module.exports = (app, passport) => {
 
     app.get('/', (req, res) => {
-
         var charityCard = [];
         db.charity.findAll({})
             .then(function(dbPost) {
